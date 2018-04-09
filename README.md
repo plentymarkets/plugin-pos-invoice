@@ -1,0 +1,1 @@
+# plugin-pos-invoice
