@@ -26,9 +26,19 @@ class SettingsController extends Controller
      */
     public function loadSettings(Request $request)
     {
+        $paymentMethod = [];
+        $paymentMethod['id'] = $this->posInvoiceHelper->getPaymentMethodId();
+        $paymentMethod['pluginKey'] = "PLUGINKEY";
+        $paymentMethod['paymentKey'] = "PAYMENTKEY";
+        $paymentMethod['name'] = $this->posInvoiceHelper->getPaymentDisplayName($request->get('lang'));
+
         $response = [];
-        $response['paymentMethodId'] = $this->posInvoiceHelper->getPaymentMethodId();
-        $response['paymentMethodName'] = $this->posInvoiceHelper->getPaymentDisplayName($request->get('lang'));
+        $response['mop'] = $paymentMethod;
+
+        $contactId = $request->get('contactId');
+
+        $response['allowedForContact'] = true;
+        $response['paymentTarget'] = 30;
 
         return $response;
     }
