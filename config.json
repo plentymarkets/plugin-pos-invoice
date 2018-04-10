@@ -1,0 +1,15 @@
+[
+  {
+    "tab": "Grundeinstellungen",
+    "key": "pos.invoice.duedate",
+    "label": "Zahlungsziel",
+    "type": "dropdown",
+    "possibleValues": {
+      "14": "14 Tage",
+      "28": "28 Tage",
+      "30": "30 Tage",
+      "60": "60 Tage"
+    },
+    "default": "30"
+  }
+]
