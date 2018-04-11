@@ -1,7 +1,7 @@
 [
   {
     "tab": "Grundeinstellungen",
-    "key": "pos.invoice.duedate",
+    "key": "pos.invoice.paymentTarget",
     "label": "Zahlungsziel",
     "type": "dropdown",
     "possibleValues": {

@@ -6,6 +6,10 @@ use Plenty\Plugin\Http\Request;
 use PosInvoice\Helper\PosInvoiceHelper;
 use Plenty\Plugin\Controller;
 
+/**
+ * Class SettingsController
+ * @package PosInvoice\Controllers
+ */
 class SettingsController extends Controller
 {
     /** @var PosInvoiceHelper $posInvoiceHelper */
@@ -28,17 +32,16 @@ class SettingsController extends Controller
     {
         $paymentMethod = [];
         $paymentMethod['id'] = $this->posInvoiceHelper->getPaymentMethodId();
-        $paymentMethod['pluginKey'] = "PLUGINKEY";
-        $paymentMethod['paymentKey'] = "PAYMENTKEY";
+        $paymentMethod['pluginKey'] = $this->posInvoiceHelper::PLUGIN_KEY;
+        $paymentMethod['paymentKey'] = $this->posInvoiceHelper::PAYMENT_KEY;
         $paymentMethod['name'] = $this->posInvoiceHelper->getPaymentDisplayName($request->get('lang'));
 
-        $response = [];
+        $response = $this->posInvoiceHelper->getConfig();
         $response['mop'] = $paymentMethod;
 
-        $contactId = $request->get('contactId');
-
-        $response['allowedForContact'] = true;
-        $response['paymentTarget'] = 30;
+        if (!is_null($request->get('contactId'))) {
+            $response['allowedForContact'] = $this->posInvoiceHelper->isAllowedForContact($request->get('contactId'));
+        }
 
         return $response;
     }
