@@ -2,6 +2,7 @@
 
 namespace PosInvoice\Helper;
 
+use Plenty\Modules\Account\Contact\Models\Contact;
 use Plenty\Modules\Payment\Method\Contracts\PaymentMethodRepositoryContract;
 use Plenty\Plugin\ConfigRepository;
 use PosInvoice\Services\ContactService;
@@ -36,10 +37,11 @@ class PosInvoiceHelper
      * @param ConfigRepository $configRepository
      * @param ContactService $contactService
      */
-    public function __construct(PaymentMethodRepositoryContract $paymentMethodRepositoryContract,
-                                ConfigRepository $configRepository,
-                                ContactService $contactService)
-    {
+    public function __construct(
+        PaymentMethodRepositoryContract $paymentMethodRepositoryContract,
+        ConfigRepository $configRepository,
+        ContactService $contactService
+    ) {
         $this->paymentMethodRepository = $paymentMethodRepositoryContract;
         $this->configRepository = $configRepository;
         $this->contactService = $contactService;
@@ -63,8 +65,7 @@ class PosInvoiceHelper
      */
     public function getPaymentMethodId()
     {
-        if($this->paymentMethodId > 0)
-        {
+        if ($this->paymentMethodId > 0) {
             return $this->paymentMethodId;
         }
 
@@ -88,7 +89,7 @@ class PosInvoiceHelper
     public function getConfig()
     {
         $config = [];
-        $config['paymentTarget'] = (int)$this->configRepository->get(self::PLUGIN_NAME.'.pos.invoice.paymentTarget');
+        $config['paymentTarget'] = (int)$this->configRepository->get(self::PLUGIN_NAME . '.pos.invoice.paymentTarget');
 
         return $config;
     }
@@ -115,22 +116,23 @@ class PosInvoiceHelper
      */
     public function isAllowedForContact($contactId)
     {
-        $allowed = false;
+        /** @var Contact $contact */
+        $contact = $this->contactService->getContact($contactId);
 
-        $contactConfig = $this->contactService->getContactInvoiceConfig($contactId);
+        if ($contact->invoiceAllowed < 1) {
+            return false;
+        }
 
-        if(!empty($contactConfig['allowedMethodOfPaymentIdsList']) && is_array($contactConfig['allowedMethodOfPaymentIdsList']))
-        {
-            foreach ($contactConfig['allowedMethodOfPaymentIdsList'] as $mopId)
-            {
-                if($mopId == $this->getPaymentMethodId())
-                {
-                    $allowed = true;
-                    break;
+        $contactConfig = $this->contactService->getContactInvoiceClassData($contactId);
+
+        if (!empty($contactConfig['allowedMethodOfPaymentIdsList']) && is_array($contactConfig['allowedMethodOfPaymentIdsList'])) {
+            foreach ($contactConfig['allowedMethodOfPaymentIdsList'] as $mopId) {
+                if ($mopId == $this->getPaymentMethodId()) {
+                    return false;
                 }
             }
         }
 
-        return $allowed;
+        return true;
     }
 }
