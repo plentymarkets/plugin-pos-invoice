@@ -130,6 +130,11 @@ class PosInvoiceHelper
                 }
             }
         }
+        else
+        {
+            // is allowed if no config found
+            $allowed = true;
+        }
 
         return $allowed;
     }
