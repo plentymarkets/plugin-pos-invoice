@@ -33,14 +33,28 @@ class ContactService
 
     /**
      * @param $contactId
-     * @return array|null
+     * @return Contact|null
      */
-    public function getContactInvoiceConfig($contactId)
+    public function getContact($contactId)
     {
         try {
             /** @var Contact $contact */
             $contact = $this->contactRepo->findContactById($contactId);
+            return $contact;
         } catch (\Exception $modelNotFoundException) {
+            return null;
+        }
+    }
+
+    /**
+     * @param $contactId
+     * @return array|null
+     */
+    public function getContactInvoiceClassData($contactId)
+    {
+        $contact = $this->getContact($contactId);
+
+        if (is_null($contact)) {
             return null;
         }
 
