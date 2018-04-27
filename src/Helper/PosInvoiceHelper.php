@@ -131,7 +131,8 @@ class PosInvoiceHelper
         $contactClassConfig = $this->contactService->getContactInvoiceClassData($contactId);
 
         if (!empty($contactClassConfig['allowedMethodOfPaymentIdsList']) && is_array($contactClassConfig['allowedMethodOfPaymentIdsList'])) {
-            if (!array_search($this->getPaymentMethodId(), $contactClassConfig['allowedMethodOfPaymentIdsList'])) {
+            /* check if invoice allowed for contact class */
+            if (!in_array($this->getPaymentMethodId(), $contactClassConfig['allowedMethodOfPaymentIdsList'])) {
                 return false;
             }
         }
