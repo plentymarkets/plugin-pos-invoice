@@ -2,9 +2,23 @@
 
 Mit diesem Plugin binden Sie die Zahlungsart **Rechnung** in Ihre plentymarkets POS Kassen ein. Wenn Sie das Plugin aktivieren, können Sie Bestandskunden, die Artikel über Ihre plentymarkets POS Kasse kaufen, die Möglichkeit anbieten, ihren Kauf auf Rechnung zu tätigen.
 
+## Wichtige Hinweise zu Retouren<a id="05." name="05.">
+
+<div class="alert alert-warning" role="alert">
+   Retouren sind mit der aktuellen Version des Plugins POS Invoice noch nicht möglich. Bis zum nächsten Tagesabschluss können die Aufträge wie gewohnt storniert werden. Nachdem ein Tagesabschluss durchgeführt wurde, müssen Retouren über das plentymarkets Backend abgewickelt werden.
+</div>
+
+## Inhaltsverzeichnis
+
+* <a href="#05."><b>Wichtige Hinweise zu Retouren</b></a>
+* <a href="#10."><b>Voraussetzungen</b></a>
+* <a href="#20."><b>Zahlungsziel festlegen</b></a>
+* <a href="#30."><b>Zahlungsart in Kundenklasse erlauben</b></a>
+* <a href="#40."><b>Hinweise zur Rechnungsvorlage</b></a>
+
 ## Voraussetzungen<a id="10." name="10.">
 
-Um Rechnungskauf über plentymarkets POS anbieten zu können, gelten die folgenden technischen Voraussetzungen:
+Das Plugin POS Invoice wird im plentymarkets Backend bereitgestellt. Um von der Kasse aus Rechnungen im DIN-A4-Format zu drucken, benötigen Sie jedoch außerdem das Plugin [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). plentyBase stellt eine Verbindung zwischen der plentymarkets App, dem plentymarkets Backend und lokalen Endgeräten her. Für den Kauf auf Rechnung über plentymarkets POS gelten daher die folgenden technischen Voraussetzungen:
 
 * plentyBase muss auf einem Rechner im Netzwerk installiert sein. <br>
 → Die Installationsdatei laden Sie im [plentyMarketplace](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053)  herunter.
@@ -13,27 +27,14 @@ Um Rechnungskauf über plentymarkets POS anbieten zu können, gelten die folgend
 ***Hinweis:*** Aktivieren Sie bei der Konfiguration die Option *HTTP-Server*. Nur so kann plentymarkets POS mit plentyBase kommunizieren.
 * plentyBase muss auf dem Rechner gestartet sein. <br>
 ***Empfehlung:*** Konfigurieren Sie plentyBase so, dass plentyBase beim Starten des Rechners automatisch gestartet wird.
-* Die Verbindungsdaten von plentyBase müssen in der plentymarkets App gespeichert sein. <br>
+* In der plentymarkets App müssen die plentyBase Verbindungsdaten gespeichert sein. <br>
 → Wie Sie die plentyBase Verbindungsdaten in der App speichern, erfahren Sie in der Beschreibung des Plugins [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053#140).
-* Für den Rechnungsdruck muss ein Drucker im plentymarkets Backend im Menü **System » Einstellungen » Drucker** konfiguriert sein.
+* Im plentymarkets Backend muss im Menü **System » Einstellungen » Drucker** ein Drucker konfiguriert sein, über den die Rechnung gedruckt wird.
 * In den Druckereinstellungen von plentymarkets POS muss [der Drucker für den Rechnungsdruck](https://knowledge.plentymarkets.com/omni-channel/pos/pos-einrichten#1020) gewählt werden.
-
-## Inhaltsverzeichnis
-
-* <a href="#10."><b>Voraussetzungen</b></a>
-* <a href="#20."><b>Zahlungsziel festlegen</b></a>
-* <a href="#30."><b>Zahlungsart in Kundenklasse erlauben</b></a>
-* <a href="#40."><b> </b></a>
-* <a href="#50."><b> </b></a>
-* <a href="#60."><b> </b></a>
-* <a href="#70."><b> </b></a>
-* <a href="#80."><b> </b></a>
-
 
 ## Zahlungsziel festlegen<a id="20." name="20.">
 
-
-
+Das Zahlungsziel für alle Rechnungen für Kassenaufträge wählen Sie in den Plugin-Einstellungen. Da für plentymarkets POS Rechnungen das Zahlungsziel der Kundenklasse nicht berücksichtigt wird, gilt das im Plugin gespeicherte Zahlungsziel für alle plentymarkets POS Rechnungen.
 
 ##### Zahlungsziel festlegen:
 
@@ -41,8 +42,8 @@ Um Rechnungskauf über plentymarkets POS anbieten zu können, gelten die folgend
   → Die Plugin-Übersicht wird geöffnet.
 2. Klicken Sie auf das Plugin **POS Invoice**.
 3. Wechseln Sie in die Ansicht **Konfiguration » Grundeinstellungen**.
-2. Wählen Sie ein Zahlungsziel aus der Dropdown-Liste **Zahlungsziel**. <br>
-→ Mögliche Zahlungsziele sind **14 Tage**, **28 Tage**, **30 Tage** und **60 Tage**.
+2. Wählen Sie ein Zahlungsziel aus der Dropdown-Liste **Zahlungsziel**. Mögliche Zahlungsziele sind **14 Tage**, **28 Tage**, **30 Tage** und **60 Tage**. <br>
+***Hinweis:*** Für plentymarkets POS Rechnungen wird das Zahlungsziel der Kundenklasse nicht berücksichtigt. Das im Plugin gespeicherte Zahlungsziel greift also für alle plentymarkets POS Rechnungen.
 3. **Speichern** Sie die Einstellung. <br>
 → Das Zahlungsziel wird gespeichert und gilt für alle Rechnungen, die über die Kasse erstellt werden.
 
@@ -54,8 +55,11 @@ Aktivieren Sie nun die Zahlungsart in den Kundenklassen, für die Sie den Rechnu
 
 1. Öffnen Sie das Menü **System » CRM » Kundenklassen**.
 2. Klappen Sie die Kundenklasse für plentymarkets POS Aufträge auf.
-3. Aktivieren Sie die Zahlungsart.
+3. Klicken Sie mit der Maus auf die Zahlungsart, um sie zu aktivieren.
 4. **Speichern** Sie die Einstellungen.
 
+## Hinweise zur Rechnungsvorlage<a id="40." name="40.">
 
-Rechnungsvorlage: Footer ergibt sich aus Stammdaten.
+* Die Rechnungsvorlage für plentymarkets POS Rechnungen ist nicht anpassbar.
+!!!! * Die auf der Rechnung ausgegebenen Adressdaten werden aus dem Menü **System » Einstellungen » Stammdaten** aufgefüllt.
+!!!! * Die auf der Rechnung ausgegebenen Bankdaten werden aus dem Menü **System » Einstellungen » Bank** aufgefüllt.
