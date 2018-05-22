@@ -5,7 +5,7 @@ Mit diesem Plugin binden Sie die Zahlungsart **Rechnung** in Ihre plentymarkets 
 ## Wichtiger Hinweis zu Retouren<a id="05." name="05.">
 
 <div class="alert alert-warning" role="alert">
-   Aufträge mit Kauf auf Rechnung können bis zum nächsten Tagesabschluss wie gewohnt storniert werden. Mit der aktuellen Version des Plugins sind Retouren von nicht oder nur teilweise bezahlten Aufträgen Rechnungskauf jedoch noch nicht möglich. Vollständig bezahlte Aufträge können nur über das plentymarkets Backend retourniert werden.
+   Aufträge mit Kauf auf Rechnung können bis zum nächsten Tagesabschluss wie gewohnt storniert werden. Mit der aktuellen Version des Plugins sind Retouren von nicht oder nur teilweise bezahlten Aufträgen mit Rechnungskauf jedoch noch nicht möglich. Vollständig bezahlte Aufträge können retourniert werden, allerdings muss vorher im plentymarkets Backend geprüft werden, dass der Auftrag vollständig bezahlt wurde.
 </div>
 
 ## Inhaltsverzeichnis
@@ -18,7 +18,7 @@ Mit diesem Plugin binden Sie die Zahlungsart **Rechnung** in Ihre plentymarkets 
 
 ## Voraussetzungen<a id="10." name="10.">
 
-Das Plugin POS Kauf auf Rechnung wird im plentymarkets Backend bereitgestellt. Um von der Kasse aus Rechnungen im DIN-A4-Format zu drucken, benötigen Sie jedoch außerdem das Plugin [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). plentyBase stellt eine Verbindung zwischen der plentymarkets App, dem plentymarkets Backend und lokalen Endgeräten her. Für den Kauf auf Rechnung über plentymarkets POS gelten daher die folgenden technischen Voraussetzungen:
+Das Plugin POS Kauf auf Rechnung wird im plentymarkets Backend bereitgestellt. Um von der Kasse aus Rechnungen im DIN-A4-Format zu drucken, benötigen Sie jedoch außerdem das Plugin [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). plentyBase stellt eine Verbindung zwischen der plentymarkets App, der Druckerkonfiguration im plentymarkets Backend und lokalen Endgeräten her. Für den Kauf auf Rechnung über plentymarkets POS gelten daher die folgenden technischen Voraussetzungen:
 
 * plentyBase muss auf einem Rechner im Netzwerk installiert sein. <br>
 → Die Installationsdatei laden Sie im [plentyMarketplace](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053)  herunter.
@@ -64,6 +64,7 @@ Die Rechnungsvorlage für plentymarkets POS Rechnungen ist nicht anpassbar. Die 
 
 | Unternehmensdaten | Menü |
 |---|---|
-| Adressdaten | **System » Mandant » Mandant öffnen » POS » Kasse öffnen** |
-| Umsatzsteuer-ID | **System » Mandant » Mandant öffnen » Standorte » Buchhaltung » Tab: Umsatzsteuersätze** |
+| Adressdaten | **System » Mandant » Mandant öffnen » POS » Kasse öffnen » Tab: Grundeinstellungen » Bereich: Standort** |
+| Telefon, Telefax, E-Mail, Hotline | **System » Einstellungen » Stammdaten** |
 | Bankdaten | **System » Einstellungen » Bank** |
+| Umsatzsteuer-ID | **System » Mandant » Mandant öffnen » Standorte » Standort öffnen » Buchhaltung » Tab: Umsatzsteuersätze** |
