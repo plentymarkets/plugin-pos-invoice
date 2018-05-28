@@ -1,4 +1,4 @@
-# User Guide für das Plugin POS Kauf auf Rechnung<a id="10." name="10.">
+# User Guide für das Plugin plentyPOS Kauf auf Rechnung<a id="10." name="10.">
 
 Mit diesem Plugin binden Sie die Zahlungsart **Rechnung** in Ihre plentymarkets POS Kassen ein. Wenn Sie das Plugin aktivieren, können Sie Bestandskunden, die Artikel über Ihre plentymarkets POS Kasse kaufen, die Möglichkeit anbieten, ihren Kauf auf Rechnung zu tätigen.
 
@@ -18,13 +18,13 @@ Mit diesem Plugin binden Sie die Zahlungsart **Rechnung** in Ihre plentymarkets 
 
 ## Voraussetzungen<a id="10." name="10.">
 
-Das Plugin POS Kauf auf Rechnung wird im plentymarkets Backend bereitgestellt. Um von der Kasse aus Rechnungen im DIN-A4-Format zu drucken, benötigen Sie jedoch außerdem das Plugin [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). plentyBase stellt eine Verbindung zwischen der plentymarkets App, der Druckerkonfiguration im plentymarkets Backend und lokalen Druckern her. Für den Kauf auf Rechnung über plentymarkets POS gelten daher die folgenden technischen Voraussetzungen:
+Das Plugin plentyPOS Kauf auf Rechnung wird im plentymarkets Backend bereitgestellt. Um von der Kasse aus Rechnungen im DIN-A4-Format zu drucken, benötigen Sie jedoch außerdem das Plugin [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). plentyBase stellt eine Verbindung zwischen der plentymarkets App, der Druckerkonfiguration im plentymarkets Backend und lokalen Druckern her. Für den Kauf auf Rechnung über plentymarkets POS gelten daher die folgenden technischen Voraussetzungen:
 
 * plentyBase muss auf einem Rechner im Netzwerk installiert sein. <br>
 → Die Installationsdatei laden Sie im [plentyMarketplace](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053)  herunter.
 * plentyBase muss auf dem Rechner konfiguriert sein. <br>
 → Die Konfigurationsanleitung finden Sie in der Beschreibung des Plugins [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). <br>
-***Hinweis:*** Aktivieren Sie bei der Konfiguration die Option *HTTP-Server*. Nur so kann plentymarkets POS mit plentyBase kommunizieren.
+***Hinweis:*** Aktivieren Sie bei der Konfiguration die Option **HTTP-Server**. Nur so kann plentymarkets POS mit plentyBase kommunizieren.
 * plentyBase muss auf dem Rechner gestartet sein. <br>
 ***Empfehlung:*** Konfigurieren Sie plentyBase so, dass plentyBase beim Starten des Rechners automatisch gestartet wird.
 * In der plentymarkets App müssen die plentyBase Verbindungsdaten gespeichert sein. <br>
@@ -40,7 +40,7 @@ Das Zahlungsziel für alle Rechnungen für Kassenaufträge wählen Sie in den Pl
 
 1. Öffnen Sie das Menü **Plugins » Plugin-Übersicht**. <br>
   → Die Plugin-Übersicht wird geöffnet.
-2. Klicken Sie auf das Plugin **POS Kauf auf Rechnung**.
+2. Klicken Sie auf das Plugin **plentyPOS Kauf auf Rechnung**.
 3. Wechseln Sie in die Ansicht **Konfiguration » Grundeinstellungen**.
 2. Wählen Sie ein Zahlungsziel aus der Dropdown-Liste **Zahlungsziel**. Mögliche Zahlungsziele sind **14 Tage**, **28 Tage**, **30 Tage** und **60 Tage**. <br>
 ***Hinweis:*** Für plentymarkets POS Rechnungen wird das Zahlungsziel der Kundenklasse nicht berücksichtigt. Das im Plugin gespeicherte Zahlungsziel greift also für alle plentymarkets POS Rechnungen.
