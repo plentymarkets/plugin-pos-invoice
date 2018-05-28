@@ -42,14 +42,13 @@ Das Zahlungsziel für alle Rechnungen für Kassenaufträge wählen Sie in den Pl
   → Die Plugin-Übersicht wird geöffnet.
 2. Klicken Sie auf das Plugin **plentyPOS Kauf auf Rechnung**.
 3. Wechseln Sie in die Ansicht **Konfiguration » Grundeinstellungen**.
-2. Wählen Sie ein Zahlungsziel aus der Dropdown-Liste **Zahlungsziel**. Mögliche Zahlungsziele sind **14 Tage**, **28 Tage**, **30 Tage** und **60 Tage**. <br>
-***Hinweis:*** Für plentymarkets POS Rechnungen wird das Zahlungsziel der Kundenklasse nicht berücksichtigt. Das im Plugin gespeicherte Zahlungsziel greift also für alle plentymarkets POS Rechnungen.
-3. **Speichern** Sie die Einstellung. <br>
+4. Wählen Sie ein Zahlungsziel aus der Dropdown-Liste **Zahlungsziel**. Mögliche Zahlungsziele sind **14 Tage**, **28 Tage**, **30 Tage** und **60 Tage**.
+5. **Speichern** Sie die Einstellung. <br>
 → Das Zahlungsziel wird gespeichert und gilt für alle Rechnungen, die über die Kasse erstellt werden.
 
 ## Zahlungsart in Kundenklasse erlauben<a id="30." name="30.">
 
-Aktivieren Sie nun die Zahlungsart in den Kundenklassen, für die Sie den Rechnungskauf über die Kasse erlauben möchten.
+Wenn Sie mit Kundenklassen arbeiten, aktivieren Sie nun die Zahlungsart in den Kundenklassen, für die Sie den Rechnungskauf über die Kasse erlauben möchten.
 
 ##### Zahlungsart in Kundenklasse erlauben:
 
