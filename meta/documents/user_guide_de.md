@@ -21,7 +21,7 @@ Mit diesem Plugin binden Sie die Zahlungsart **Rechnung** in Ihre plentymarkets 
 Das Plugin plentyPOS Kauf auf Rechnung wird im plentymarkets Backend bereitgestellt. Um von der Kasse aus Rechnungen im DIN-A4-Format zu drucken, benötigen Sie jedoch außerdem das Plugin [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). plentyBase stellt eine Verbindung zwischen der plentymarkets App, der Druckerkonfiguration im plentymarkets Backend und lokalen Druckern her. Für den Kauf auf Rechnung über plentymarkets POS gelten daher die folgenden technischen Voraussetzungen:
 
 * plentyBase muss auf einem Rechner im Netzwerk installiert sein. <br>
-→ Die Installationsdatei laden Sie im [plentyMarketplace](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053)  herunter.
+→ Die Installationsdatei laden Sie im [plentyMarketplace](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053) herunter.
 * plentyBase muss auf dem Rechner konfiguriert sein. <br>
 → Die Konfigurationsanleitung finden Sie in der Beschreibung des Plugins [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). <br>
 ***Hinweis:*** Aktivieren Sie bei der Konfiguration die Option **HTTP-Server**. Nur so kann plentymarkets POS mit plentyBase kommunizieren.

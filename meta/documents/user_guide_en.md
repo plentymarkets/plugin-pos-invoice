@@ -21,14 +21,14 @@ With this plugin, you integrate the payment method **Invoice** into your plentym
 Provision the plugin plentyPOS Invoice in the plentymarkets back end. However, to print invoices in A4/letter format, you also need the plugin [plentyBase](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053). plentyBase establishes a connection between the plentymarkets app, the printer configuration in the plentymarkets back end and local printers. As such, the following technical requirements apply for invoice purchases via plentymarkets POS:
 
 * plentyBase must be installed on the network computer. <br/>
-→ To download the installation file, go to the [plentyMarketplace^](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053).
+→ To download the installation file, go to the [plentyMarketplace](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053).
 * plentyBase must be configured on the computer. <br/>
-→ Find out how to configure plentyBase in the plugin description of the plugin [plentyBase^](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053). <br/>
+→ Find out how to configure plentyBase in the plugin description of the plugin [plentyBase](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053). <br/>
 ***Note:*** During configuration, activate the option **HTTP server**. This ensures that plentymarkets POS can communicate with plentyBase.
 * plentyBase must be running on the computer. <br/>
 ***Recommendation:*** Configure plentyBase to run automatically when the computer is started up.
 * The plentyBase connection details must be saved in the plentymarkets app. <br/>
-→ Find out how to save the plentyBase connection data in the plugin description of the plugin [plentyBase^](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053#140).
+→ Find out how to save the plentyBase connection data in the plugin description of the plugin [plentyBase](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053#140).
 * A printer for printing the invoices must be configured in the plentymarkets back end menu **System » Settings » Printers**.
 * The [printer for printing the invoices](https://knowledge.plentymarkets.com/en/omni-channel/pos/pos-einrichten#1020) must be selected in the printer settings of plentymarkets POS.
 
