@@ -10,7 +10,7 @@
   "description"       : "Invoice plugin for plentymarkets POS",
   "shortDescription"  : { "de":"Mit dem Plugin plentyPOS Kauf auf Rechnung bieten Sie Bestandskunden den Rechnungskauf über Ihr plentyPOS Kassensystem an.",
                           "en":"The plugin plentyPOS Invoice provides the payment method Invoice for your plentymarkets POS system."},
-  "categories"        : ["3519","3521"],
+  "categories"        : ["3519"],
   "keywords"          : ["Invoice", "POS", "plentymarkets", "payment", "integration"],
   "author"            : "plentymarkets GmbH",
   "authorIcon"        : "icon_author_xs.png",
