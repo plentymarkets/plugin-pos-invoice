@@ -15,6 +15,8 @@ Mit diesem Plugin binden Sie die Zahlungsart **Rechnung** in Ihre plentymarkets 
 * <a href="#20."><b>Zahlungsziel festlegen</b></a>
 * <a href="#30."><b>Zahlungsart in Kundenklasse erlauben</b></a>
 * <a href="#40."><b>Hinweise zur Rechnungsvorlage</b></a>
+* <a href="#50."><b>Rechnung per E-Mail an Bestandskunden senden</b></a>
+
 
 ## Voraussetzungen<a id="10." name="10.">
 
@@ -67,3 +69,51 @@ Die Rechnungsvorlage für plentymarkets POS Rechnungen ist nicht anpassbar. Die 
 | Telefon, Telefax, E-Mail, Hotline | **System » Einstellungen » Stammdaten** |
 | Bankdaten | **System » Einstellungen » Bank** |
 | Umsatzsteuer-ID | **System » Mandant » Mandant öffnen » Standorte » Standort öffnen » Buchhaltung » Tab: Umsatzsteuersätze** |
+
+
+## Rechnung per E-Mail an Bestandskunden senden<a id="50." name="50.">
+
+plentymarkets ermöglicht es Ihnen, plentymarkets POS Rechnungen per Ereignisaktion automatisch an die am Kundendatensatz gespeicherte E-Mail-Adresse zu senden. Dazu nutzen Sie die E-Mail-Vorlage für den Rechnungsversand von plentymarkets oder erstellen eine eigene E-Mail-Vorlage. Nachdem Sie eine E-Mail-Vorlage Erstellen Sie zunächst eine Ereignisaktion. Für Kassenaufträge, die im Offline-Modus erstellt werden, wird die Ereignisaktion jedoch erst ausgeführt, wenn die Kassenaufträge in das plentymarkets Backend hochgeladen werden. Prüfen Sie vor der Einrichtung des automatischen Rechnungsversands die aktuellen gesetzlichen Bestimmungen zum Versand von E-Mails an Kunden.
+
+#### E-Mail-Vorlage erstellen
+
+Damit Rechnungen automatisch versendet werden können, benötigen Sie eine [E-Mail-Vorlage](https://knowledge.plentymarkets.com/crm/e-mails-versenden#1200). Sie können die vorhandene [E-Mail-Vorlage](https://knowledge.plentymarkets.com/crm/e-mails-versenden#1200) von plentymarkets für den Rechnungsversand verwenden. Alternativ gehen Sie wie unten beschrieben vor, um eine eigene E-Mail-Vorlage zu erstellen.
+
+##### E-Mail-Vorlage erstellen:
+
+1. Öffnen Sie das Menü **System » Mandant » Mandant wählen » E-Mail » Vorlagen**.
+2. Klicken Sie auf **Neue E-Mail-Vorlage**. <br>
+→ Das Fenster **Neue E-Mail-Vorlage** wird geöffnet.
+3. Geben Sie einen Namen für die Vorlage ein.
+4. Wählen Sie einen Eigner oder **Alle** aus der Dropdown-Liste **Eigner**.
+5. Klicken Sie auf **Speichern**. <br>
+→ Die E-Mail-Vorlage wird erstellt und je nach gewähltem Eigner in einem der drei Ordner gespeichert.
+6. Wählen Sie den PDF-Anhang **Rechnung**.
+7. Nehmen Sie die weiteren Einstellungen vor. Beachten Sie die Erläuterungen unter [Neue E-Mail-Vorlage erstellen](https://knowledge.plentymarkets.com/crm/e-mails-versenden#1200).
+8. **Speichern** Sie die Einstellungen.
+
+
+### Ereignisaktion erstellen
+
+Erstellen Sie nun eine Ereignisaktion, über die die E-Mail-Vorlage versendet wird, wenn ein Rechnung über plentymarkets POS generiert wird.
+
+##### Ereignisaktion einrichten
+
+1. Öffnen Sie das Menü **System » Aufträge » Ereignisse**.
+2. Klicken Sie auf **Ereignisaktion hinzufügen**. <br>
+→ Das Fenster **Neue Ereignisaktion erstellen** wird geöffnet.
+3. Geben Sie einen Namen ein.
+4. Wählen Sie das **Ereignis** gemäß Tabelle 2.
+5. **Speichern** Sie die Einstellungen.
+6. Nehmen Sie die Einstellungen gemäß Tabelle 2 vor.
+7. Setzen Sie ein Häkchen bei **Aktiv**.
+8. **Speichern** Sie die Einstellungen.
+
+
+| Einstellung | Option | Auswahl |
+|---|---|---|
+| **Ereignis** | **Dokumente: Rechnung generiert** | |
+| **Filter** | **Auftrag &gt; Herkunft** | Kasse wählen, für die Rechnungen per E-Mail versendet werden sollen. |
+| **Aktion** | **Kunde &gt; E-Mail versenden** | **Vorlage**: Die E-Mail-Vorlage für Rechnung wählen. **Empfänger**: Option **Kunde** wählen. |
+
+Tabelle 2: Ereignisaktion zum automatischen E-Mail-Versand der Rechnung
