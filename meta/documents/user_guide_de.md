@@ -73,7 +73,7 @@ Die Rechnungsvorlage für plentymarkets POS Rechnungen ist nicht anpassbar. Die 
 
 ## Rechnung per E-Mail an Bestandskunden senden<a id="50." name="50.">
 
-plentymarkets ermöglicht es Ihnen, plentymarkets POS Rechnungen per Ereignisaktion automatisch an die am Kundendatensatz gespeicherte E-Mail-Adresse zu senden. Dazu nutzen Sie die E-Mail-Vorlage für den Rechnungsversand von plentymarkets oder erstellen eine eigene E-Mail-Vorlage. Nachdem Sie eine E-Mail-Vorlage Erstellen Sie zunächst eine Ereignisaktion. Für Kassenaufträge, die im Offline-Modus erstellt werden, wird die Ereignisaktion jedoch erst ausgeführt, wenn die Kassenaufträge in das plentymarkets Backend hochgeladen werden. Prüfen Sie vor der Einrichtung des automatischen Rechnungsversands die aktuellen gesetzlichen Bestimmungen zum Versand von E-Mails an Kunden.
+plentymarkets ermöglicht es Ihnen, plentymarkets POS Rechnungen per Ereignisaktion automatisch an die am Kundendatensatz gespeicherte E-Mail-Adresse zu senden. Dazu nutzen Sie die E-Mail-Vorlage für den Rechnungsversand von plentymarkets oder erstellen eine eigene E-Mail-Vorlage. Wenn Sie eine E-Mail-Vorlage haben, mit der Sie arbeiten möchten, erstellen Sie eine Ereignisaktion. Für Kassenaufträge, die im Offline-Modus erstellt werden, wird die Ereignisaktion jedoch erst ausgeführt, wenn die Kassenaufträge in das plentymarkets Backend hochgeladen werden. Prüfen Sie vor der Einrichtung des automatischen Rechnungsversands die aktuellen gesetzlichen Bestimmungen zum Versand von E-Mails an Kunden.
 
 #### E-Mail-Vorlage erstellen
 
@@ -95,7 +95,7 @@ Damit Rechnungen automatisch versendet werden können, benötigen Sie eine [E-Ma
 
 ### Ereignisaktion erstellen
 
-Erstellen Sie nun eine Ereignisaktion, über die die E-Mail-Vorlage versendet wird, wenn ein Rechnung über plentymarkets POS generiert wird.
+Erstellen Sie nun eine Ereignisaktion, über die die E-Mail-Vorlage versendet wird, wenn eine Rechnung über plentymarkets POS generiert wird.
 
 ##### Ereignisaktion einrichten
 
