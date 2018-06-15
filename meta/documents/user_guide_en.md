@@ -15,6 +15,7 @@ With this plugin, you integrate the payment method **Invoice** into your plentym
 * <a href="#20."><b>Selecting the payment due date</b></a>
 * <a href="#30."><b>Permitting the payment method in a customer class</b></a>
 * <a href="#40."><b>Invoice template information</b></a>
+* <a href="#50."><b>Emailing invoices to existing customers</b></a>
 
 ## Requirements<a id="10." name="10.">
 
@@ -67,3 +68,47 @@ You cannot customise the invoice template that is used for plentyPOS invoices. T
 | Telephone, telefax, email, hotline | **System » Settings » Master data** |
 | Bank details | **System » Settings » Bank** |
 | VAT number | **System » Client » Open client » Locations » Open location » Accounting » Tab: VAT rates** |
+
+## Emailing invoices to existing customers<a id="50." name="50.">
+
+plentymarkets allows you to set up an event procedure that automatically emails plentymarkets POS invoices to the email address saved for a customer record. You can utilise the default email template for invoices for this purpose or create a custom email template. After you have decided on an email template, create an event procedure. Note that for POS orders created in offline mode, the event procedure only takes effect once the POS order is uploaded to the plentymarkets back end. Before setting up automatic emails for sending invoices, check current legal restrictions regarding emailing customers.
+
+#### Creating an email template
+
+You need an [email template](https://knowledge.plentymarkets.com/crm/sending-emails#1200) that is sent when an invoice is generated. You can use the existing [email template](https://knowledge.plentymarkets.com/crm/sending-emails#1200) for sending invoices. Alternatively, proceed as described below to create a custom email template.
+
+##### Creating an email template:
+
+1. Go to **System » Client » Select client » Email » Templates**.
+2. Click on **New email template**. <br/>
+→ The **New email template** window will open.
+3. Enter a name for the template.
+4. Select an owner or the setting **All** from the drop-down list **Owner**.
+5. Click on **Save**. <br/>
+→ The email template is created and saved in one of the three folders based on the owner you selected.
+6. Select the PDF attachment **Invoice**.
+7. Carry out the additional settings. Pay attention to the information on [creating a new email template](https://knowledge.plentymarkets.com/crm/sending-emails#1200).
+8. **Save** the settings.
+
+
+### Creating an event procedure
+
+Now, create an event procedure that triggers an email to the customer when an invoice is generated in plentymarkets POS.
+
+##### Setting up an event procedure
+
+1. Go to **System » Orders » Events**.
+2. Click on **Add event procedure**. <br/>
+→ The **Create new event procedure** window will open.
+3. Enter a name.
+4. Select the **event** listed in table 2.
+5. **Save** the settings.
+6. Configure the settings as described in table 2.
+7. Place a check mark next to the option **Active**.
+8. **Save** the settings.
+
+| Setting | Option | Selection |
+|---|---|---|
+| **Event** | **Documents: Invoice generated** | |
+| **Filter** | **Order &gt; Referrer** | Select the POS for which you want to email invoices. |
+| **Procedure** | **Customer &gt; Send email** | **Template**: Select the email template you set up for sending invoices. **Recipient**: Select the option **Customer**. |
