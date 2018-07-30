@@ -2,15 +2,15 @@
 
 With this plugin, you integrate the payment method **Invoice** into your plentymarkets POS points of sale. When you activate the plugin, you can allow existing customers buying items via plentymarkets POS to pay for their purchase on account.
 
-## Important return information<a id="05." name="05.">
+## Return information<a id="05." name="05.">
 
 <div class="alert alert-warning" role="alert">
-   Orders with the payment method plentyPOS Invoice can be cancelled until the next z report is generated. However, you cannot return partially or fully unpaid orders with the payment method plentyPOS Invoice with the current version of this plugin. Fully paid orders can be returned. The plentymarkets app does not allow you to check if an order has been paid. As such, you need to open the plentymarkets back end to check if an order has been paid in full.
+   Orders with the payment method POS invoice can be cancelled until the next z report is generated. In version 1.8 and higher, you can also accept returns for items bought on account. If an invoice has been partially paid, the amount to be refunded to the customer is calculated automatically.
 </div>
 
 ## Contents
 
-* <a href="#05."><b>Important return information</b></a>
+* <a href="#05."><b>Return information</b></a>
 * <a href="#10."><b>Requirements</b></a>
 * <a href="#20."><b>Selecting the payment due date</b></a>
 * <a href="#30."><b>Permitting the payment method in a customer class</b></a>

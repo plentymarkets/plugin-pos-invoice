@@ -2,15 +2,14 @@
 
 Mit diesem Plugin binden Sie die Zahlungsart **Rechnung** in Ihre plentymarkets POS Kassen ein. Wenn Sie das Plugin aktivieren, können Sie Bestandskunden, die Artikel über Ihre plentymarkets POS Kasse kaufen, die Möglichkeit anbieten, ihren Kauf auf Rechnung zu tätigen.
 
-## Wichtiger Hinweis zu Retouren<a id="05." name="05.">
+## Hinweis zu Retouren<a id="05." name="05.">
 
-<div class="alert alert-warning" role="alert">
-   Aufträge mit Kauf auf Rechnung können bis zum nächsten Tagesabschluss wie gewohnt storniert werden. Mit der aktuellen Version des Plugins sind Retouren von nicht oder nur teilweise bezahlten Aufträgen mit Rechnungskauf jedoch noch nicht möglich. Vollständig bezahlte Aufträge können retourniert werden. Die plentymarkets App ermöglicht es Ihnen jedoch nicht zu prüfen, ob ein Auftrag vollständig bezahlt wurde. Deshalb muss vor einer Retoure im plentymarkets Backend geprüft werden, dass der Auftrag tatsächlich vollständig bezahlt wurde.
+<div class="alert alert-warning" role="alert">Aufträge mit Kauf auf Rechnung können bis zum nächsten Tagesabschluss wie gewohnt storniert werden. Auch die Retoure von auf Rechnung gekauften Artikeln ist ab Version 1.8 der plentymarkets App möglich. Bei Teilzahlung errechnet die Kasse automatisch, welchen Betrag Kunden zurückbekommen.
 </div>
 
 ## Inhaltsverzeichnis
 
-* <a href="#05."><b>Wichtiger Hinweis zu Retouren</b></a>
+* <a href="#05."><b>Hinweis zu Retouren</b></a>
 * <a href="#10."><b>Voraussetzungen</b></a>
 * <a href="#20."><b>Zahlungsziel festlegen</b></a>
 * <a href="#30."><b>Zahlungsart in Kundenklasse erlauben</b></a>
