@@ -41,6 +41,7 @@ class SettingsController extends Controller
 
         if (!is_null($request->get('contactId'))) {
             $response['allowedForContact'] = $this->posInvoiceHelper->isAllowedForContact($request->get('contactId'));
+            $response['paymentTarget'] = $this->posInvoiceHelper->getContactPaymentTarget($request->get('contactId'), $request->get('companyName'));
         }
 
         return $response;

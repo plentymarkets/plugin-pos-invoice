@@ -5,29 +5,19 @@
       "label": "Config.mainSettings",
       "formFields": {
         "pos.invoice.paymentTarget": {
-          "type": "selectBox",
+          "type": "inputText",
           "required": false,
           "label": "Config.posInvoicePaymentTargetLabel",
           "options": {
-            "defaultValue": "30",
-            "selectBoxValues": [
-              {
-                "value": "14",
-                "caption": "Config.posInvoicePaymentTargetPossibleValue-14"
-              },
-              {
-                "value": "28",
-                "caption": "Config.posInvoicePaymentTargetPossibleValue-28"
-              },
-              {
-                "value": "30",
-                "caption": "Config.posInvoicePaymentTargetPossibleValue-30"
-              },
-              {
-                "value": "60",
-                "caption": "Config.posInvoicePaymentTargetPossibleValue-60"
-              }
-            ]
+            "defaultValue": 14
+          }
+        },
+        "pos.invoice.removeFooter": {
+          "type": "checkBox",
+          "required": false,
+          "label": "Config.posInvoiceRemoveFooterLabel",
+          "options": {
+            "defaultValue": false
           }
         }
       }
