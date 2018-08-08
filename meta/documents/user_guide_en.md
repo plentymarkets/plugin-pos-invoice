@@ -35,7 +35,7 @@ Provision the plugin plentyPOS Invoice in the plentymarkets back end. However, t
 
 ## Selecting the payment due date<a id="20." name="20.">
 
-Select the payment due date for all invoices created for POS orders in the plugin settings. Because the payment due date of the customer class is not considered for plentyPOS invoices, the payment due date saved in the plugin settings is applied to all plentyPOS invoices.
+Select a payment due date for invoices created for POS orders in the plugin settings. When an invoice is created, any payment due date saved for the customer takes priority. If no payment due date is saved for the customer, the payment due date saved for the customer class applies. If no payment due date for the customer class exists, the payment due date you set in the plugin takes effect.
 
 ##### Selecting the payment due date:
 
@@ -43,9 +43,10 @@ Select the payment due date for all invoices created for POS orders in the plugi
 → The plugin overview will open.
 2. Click on the **plentyPOS Invoice** plugin.
 3. Open the **Configuration » Basic settings** view.
-4. Select a payment due date from the drop-down list **Payment due date**. You can select a payment due date of **14 days**, **28 days**, **30 days** or **60 days**.
+4. Enter a **Payment due (in days)**.
 5. **Save** the settings. <br/>
-→ The payment due date is saved and applied to all invoices created at points of sale.
+→ The payment due date is saved and applied to all invoices created at points of sale. <br/>
+→ The payment due date takes effect for all customers for which no other payment due date is saved in the customer data or the customer class.
 
 ## Permitting the payment method in a customer class<a id="30." name="30.">
 
