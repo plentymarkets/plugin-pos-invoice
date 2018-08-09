@@ -4,6 +4,7 @@ namespace PosInvoice\Helper;
 
 use Plenty\Modules\Account\Contact\Models\Contact;
 use Plenty\Modules\Account\Contact\Models\ContactAllowedMethodOfPayment;
+use Plenty\Modules\Account\Models\Account;
 use Plenty\Modules\Payment\Method\Contracts\PaymentMethodRepositoryContract;
 use Plenty\Plugin\ConfigRepository;
 use PosInvoice\Services\ContactService;
@@ -90,7 +91,9 @@ class PosInvoiceHelper
     public function getConfig()
     {
         $config = [];
-        $config['paymentTarget'] = (int)$this->configRepository->get(self::PLUGIN_NAME . '.pos.invoice.paymentTarget');
+
+        $removeFooter = $this->configRepository->get(self::PLUGIN_NAME . '.pos.invoice.removeFooter');
+        $removeFooter === 'true' ? $config['removeFooter'] = true : $config['removeFooter'] = false;
 
         return $config;
     }
@@ -138,5 +141,37 @@ class PosInvoiceHelper
         }
 
         return true;
+    }
+
+    /**
+     * @param $contactId
+     * @param string $companyName
+     * @return int
+     */
+    public function getContactPaymentTarget($contactId, $companyName = '')
+    {
+        /** @var Contact $contact */
+        $contact = $this->contactService->getContact($contactId);
+
+        if(strlen($companyName) && !$contact->accounts->isEmpty())
+        {
+            /** @var Account $account */
+            foreach ($contact->accounts as $account)
+            {
+                if($account->companyName == $companyName && $account->timeForPaymentAllowedDays > 0)
+                {
+                    return (int)$account->timeForPaymentAllowedDays;
+                }
+            }
+        }
+
+        $contactClassConfig = $this->contactService->getContactInvoiceClassData($contactId);
+
+        if(!empty($contactClassConfig['payableDueWithin']) && $contactClassConfig['payableDueWithin'] > 0)
+        {
+            return (int)$contactClassConfig['payableDueWithin'];
+        }
+
+        return (int)$this->configRepository->get(self::PLUGIN_NAME . '.pos.invoice.paymentTarget');
     }
 }
