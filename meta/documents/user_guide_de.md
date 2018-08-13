@@ -59,9 +59,9 @@ Wenn Sie mit Kundenklassen arbeiten, aktivieren Sie nun die Zahlungsart in den K
 3. Klicken Sie mit der Maus auf die Zahlungsart, um sie zu aktivieren.
 4. **Speichern** Sie die Einstellungen.
 
-## Hinweise zur Rechnungsvorlage<a id="40." name="40.">
+## Rechnungsvorlage anpassen<a id="40." name="40.">
 
-Die Rechnungsvorlage für plentymarkets POS Rechnungen ist nicht anpassbar. Die Unternehmensdaten werden aus den folgenden Menüs des plentymarkets Backend aufgefüllt:
+Die Unternehmensdaten auf der Rechnungsvorlage werden aus den folgenden Menüs des plentymarkets Backend aufgefüllt:
 
 | Unternehmensdaten | Menü |
 |---|---|
@@ -70,6 +70,17 @@ Die Rechnungsvorlage für plentymarkets POS Rechnungen ist nicht anpassbar. Die 
 | Bankdaten | **System » Einstellungen » Bank** |
 | Umsatzsteuer-ID | **System » Mandant » Mandant öffnen » Standorte » Standort öffnen » Buchhaltung » Tab: Umsatzsteuersätze** |
 
+Die Rechnungsvorlage für plentymarkets POS Rechnungen ist nicht anpassbar. Sie können allerdings die Fußzeile unterdrücken, wenn Sie Rechnungen auf vorgedrucktem Briefpapier drucken möchten, das bereits Ihre Unternehmensdaten enthält.
+
+##### Fußzeile auf Rechungsdokument unterdrücken:
+
+1. Öffnen Sie das Menü **Plugins » Plugin-Übersicht**. <br>
+  → Die Plugin-Übersicht wird geöffnet.
+2. Klicken Sie auf das Plugin **plentyPOS Kauf auf Rechnung**.
+3. Wechseln Sie in die Ansicht **Konfiguration » Grundeinstellungen**.
+4. Aktivieren Sie die Option **Fußzeile auf Rechungsdokument unterdrücken**.
+5. **Speichern** Sie die Einstellung. <br>
+→ Die Fußzeile wird nicht auf das Rechnungsdokument gedruckt.
 
 ## Rechnung per E-Mail an Bestandskunden senden<a id="50." name="50.">
 

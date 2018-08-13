@@ -14,7 +14,7 @@ With this plugin, you integrate the payment method **Invoice** into your plentym
 * <a href="#10."><b>Requirements</b></a>
 * <a href="#20."><b>Selecting the payment due date</b></a>
 * <a href="#30."><b>Permitting the payment method in a customer class</b></a>
-* <a href="#40."><b>Invoice template information</b></a>
+* <a href="#40."><b>Customising the invoice template</b></a>
 * <a href="#50."><b>Emailing invoices to existing customers</b></a>
 
 ## Requirements<a id="10." name="10.">
@@ -59,9 +59,9 @@ If you work with customer classes, activate the payment method for all customer 
 3. Right-click the payment method to activate it.
 4. **Save** the settings.
 
-## Invoice template information<a id="40." name="40.">
+## Customising the invoice template<a id="40." name="40.">
 
-You cannot customise the invoice template that is used for plentyPOS invoices. The information shown on the invoices is prefilled from the following menus of the plentymarkets back end:
+The information shown on the invoices is prefilled from the following menus of the plentymarkets back end:
 
 | Company details | Menu |
 |---|---|
@@ -69,6 +69,18 @@ You cannot customise the invoice template that is used for plentyPOS invoices. T
 | Telephone, telefax, email, hotline | **System » Settings » Master data** |
 | Bank details | **System » Settings » Bank** |
 | VAT number | **System » Client » Open client » Locations » Open location » Accounting » Tab: VAT rates** |
+
+You cannot customise the invoice template that is used for plentyPOS invoices. However, you can hide the footer if you want to print POS invoices on pre-printed stationery that already contains your company details.
+
+##### Hiding the footer on invoice documents:
+
+1. Go to **Plugins » Plugin overview**. <br/>
+→ The plugin overview will open.
+2. Click on the **plentyPOS Invoice** plugin.
+3. Activate the checkbox **Hide footer on invoice document**.
+5. **Save** the settings. <br/>
+→ The footer is not printed on invoice documents.
+
 
 ## Emailing invoices to existing customers<a id="50." name="50.">
 
