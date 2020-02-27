@@ -31,7 +31,7 @@ class PosInvoicePaymentMethod extends PaymentMethodService
      *
      * @return bool
      */
-    public function isBackendSearchable():bool
+    public function isBackendSearchable(): bool
     {
         return true;
     }
@@ -42,7 +42,7 @@ class PosInvoicePaymentMethod extends PaymentMethodService
      *
      * @return bool
      */
-    public function isBackendActive():bool
+    public function isBackendActive(): bool
     {
         return true;
     }
@@ -53,7 +53,7 @@ class PosInvoicePaymentMethod extends PaymentMethodService
      * @param string $lang
      * @return string
      */
-    public function getBackendName(string $lang):string
+    public function getBackendName(string $lang): string
     {
         return $this->getName();
     }
@@ -63,7 +63,7 @@ class PosInvoicePaymentMethod extends PaymentMethodService
      *
      * @return bool
      */
-    public function canHandleSubscriptions():bool
+    public function canHandleSubscriptions(): bool
     {
         return false;
     }
