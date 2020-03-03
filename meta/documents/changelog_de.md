@@ -1,5 +1,11 @@
 # Release Notes für POS Kauf auf Rechnung
 
+## v.1.2.1
+
+### Funktionen
+
+-  Neue Funktionalitäten für die Sichtbarkeit im Backend eingefügt
+
 ## v.1.2.0
 
 ### Funktionen

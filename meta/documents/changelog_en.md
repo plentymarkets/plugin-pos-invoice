@@ -1,5 +1,11 @@
 # Release Notes for POS Invoice
 
+## v.1.2.1
+
+### Functions
+
+-  Added new functions for the backend visibility
+
 ## v.1.2.0
 
 ### Functions
