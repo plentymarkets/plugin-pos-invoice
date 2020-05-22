@@ -1,5 +1,12 @@
 # Release Notes for POS Invoice
 
+## v.1.2.2
+
+### Changed
+
+- User guide adjustments
+
+
 ## v.1.2.1
 
 ### Functions
