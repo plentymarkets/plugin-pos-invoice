@@ -133,4 +133,4 @@ Tabelle 2: Ereignisaktion zum automatischen E-Mail-Versand der Rechnung
 
 ## Anzahlungen über plentyPOS entgegennehmen<a id="60." name="60.">
 
-Mit plentyPOS kannst du unkompliziert Anzahlungen entgegennehmen. Dies ist zum Beispiel bei Artikeln mit hohen Verkaufspreisen oder bei Ware, die speziell für Kunden angefertigt wird, sinnvoll. Zur Abwicklungen von Anzahlungen im plentymarkets muss das Plugin plentyPOS Kauf auf Rechnung aktiviert sowie bereits ein Kontaktdatensatz für den betreffenden Kunden vorhanden sein. In unserem [Handbuch](https://knowledge.plentymarkets.com/pos/pos-kassenbenutzer#440) findest du eine Anleitung zum Umgang mit Anzahlungen.
+Mit plentyPOS kannst du unkompliziert Anzahlungen entgegennehmen. Dies ist zum Beispiel bei Artikeln mit hohen Verkaufspreisen oder bei Ware, die speziell für Kunden angefertigt wird, sinnvoll. Zur Abwicklungen von Anzahlungen muss das Plugin plentyPOS Kauf auf Rechnung aktiviert sowie bereits ein Kontaktdatensatz für den betreffenden Kunden vorhanden sein. In unserem [Handbuch](https://knowledge.plentymarkets.com/pos/pos-kassenbenutzer#440) findest du eine Anleitung zum Umgang mit Anzahlungen.
