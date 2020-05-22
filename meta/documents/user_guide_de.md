@@ -27,9 +27,9 @@ Das Plugin plentyPOS Kauf auf Rechnung wird im plentymarkets Backend bereitgeste
 → Die Installationsdatei lädst du im [plentyMarketplace](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053) herunter.
 * plentyBase muss auf dem Rechner konfiguriert sein. <br>
 → Die Konfigurationsanleitung findest du in der Beschreibung des Plugins [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). <br>
-*_Hinweis:_* Aktiviere bei der Konfiguration die Option **HTTP-Server**. Nur so kann plentyPOS mit plentyBase kommunizieren.
+  *_Hinweis:_* Aktiviere bei der Konfiguration die Option **HTTP-Server**. Nur so kann plentyPOS mit plentyBase kommunizieren.
 * plentyBase muss auf dem Rechner gestartet sein. <br>
-*_Tipp:_* Konfiguriere plentyBase so, dass plentyBase beim Starten des Rechners automatisch gestartet wird.
+  *_Tipp:_* Konfiguriere plentyBase so, dass plentyBase beim Starten des Rechners automatisch gestartet wird.
 * In der plentymarkets App müssen die plentyBase Verbindungsdaten gespeichert sein. <br>
 → Wie du die plentyBase Verbindungsdaten in der App speicherst, erfährst du in der Beschreibung des Plugins [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053#140).
 * Im plentymarkets Backend muss im Menü **System » Einstellungen » Drucker** ein Drucker konfiguriert sein, über den die Rechnung gedruckt wird.
@@ -57,7 +57,7 @@ Wenn du mit Kundenklassen arbeitest, aktiviere nun die Zahlungsart in den Kunden
 ##### Zahlungsart in Kundenklasse erlauben:
 
 1. Öffne das Menü **System » CRM » Kundenklassen**.
-2. Klappe die Kundenklasse für plentymarkets POS Aufträge auf.
+2. Klappe die Kundenklasse für plentyPOS Aufträge auf.
 3. Klicke mit der Maus auf die Zahlungsart, um sie zu aktivieren.
 4. **Speichere** die Einstellungen.
 
@@ -72,7 +72,7 @@ Die Unternehmensdaten auf der Rechnungsvorlage werden aus den folgenden Menüs d
 | Bankdaten | **System » Einstellungen » Bank** |
 | Umsatzsteuer-ID | **System » Mandant » Mandant öffnen » Standorte » Standort öffnen » Buchhaltung » Tab: Umsatzsteuersätze** |
 
-Die Rechnungsvorlage für plentymarkets POS Rechnungen ist nicht anpassbar. Du kannst allerdings die Fußzeile unterdrücken, wenn du Rechnungen auf vorgedrucktem Briefpapier drucken möchtest, das bereits deine Unternehmensdaten enthält.
+Die Rechnungsvorlage für plentyPOS Rechnungen ist nicht anpassbar. Du kannst allerdings die Fußzeile unterdrücken, wenn du Rechnungen auf vorgedrucktem Briefpapier drucken möchtest, das bereits deine Unternehmensdaten enthält.
 
 ##### Fußzeile auf Rechungsdokument unterdrücken:
 
@@ -108,7 +108,7 @@ Damit Rechnungen automatisch versendet werden können, benötigst du eine [E-Mai
 
 ### Ereignisaktion erstellen
 
-Erstelle nun eine Ereignisaktion, über die die E-Mail-Vorlage versendet wird, wenn eine Rechnung über plentymarkets POS generiert wird.
+Erstelle nun eine Ereignisaktion, über die die E-Mail-Vorlage versendet wird, wenn eine Rechnung über plentyPOS generiert wird.
 
 ##### Ereignisaktion einrichten
 
