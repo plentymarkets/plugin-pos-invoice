@@ -1,5 +1,12 @@
 # Release Notes für POS Kauf auf Rechnung
 
+## v.1.2.3
+
+### Geändert
+
+- Stichwortoptimierung für den Marketplace
+
+
 ## v.1.2.2
 
 ### Geändert
@@ -13,6 +20,7 @@
 
 -  Neue Funktionalitäten für die Sichtbarkeit im Backend eingefügt
 
+
 ## v.1.2.0
 
 ### Funktionen
@@ -24,6 +32,7 @@
 ### Fixes
 
 - Zahlungsziel wird nun auf der Rechnung ausgegeben
+
 
 ## v.1.0.0
 
