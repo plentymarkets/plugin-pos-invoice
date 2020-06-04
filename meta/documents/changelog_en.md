@@ -1,5 +1,12 @@
 # Release Notes for POS Invoice
 
+## v.1.2.3
+
+### Changed
+
+- Keyword optimisation for plentyMarketplace
+
+
 ## v.1.2.2
 
 ### Changed
@@ -13,6 +20,7 @@
 
 -  Added new functions for the backend visibility
 
+
 ## v.1.2.0
 
 ### Functions
@@ -25,8 +33,9 @@
 
 - Payment due date is now shown on the invoice
 
+
 ## v.1.0.0
 
 ### Functions
 
-- POS Invoice integration for plentymarkets POS
+- POS Invoice integration for plentyPOS

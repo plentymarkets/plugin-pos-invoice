@@ -1,5 +1,12 @@
 # Release Notes für POS Kauf auf Rechnung
 
+## v.1.2.3
+
+### Geändert
+
+- Suchwortoptimierung für den plentyMarketplace
+
+
 ## v.1.2.2
 
 ### Geändert
@@ -13,6 +20,7 @@
 
 -  Neue Funktionalitäten für die Sichtbarkeit im Backend eingefügt
 
+
 ## v.1.2.0
 
 ### Funktionen
@@ -25,8 +33,9 @@
 
 - Zahlungsziel wird nun auf der Rechnung ausgegeben
 
+
 ## v.1.0.0
 
 ### Funktionen
 
-- Integration von POS Rechnungskauf für das plentymarkets POS Kassensystem
+- Integration von POS Rechnungskauf für das plentyPOS Kassensystem
