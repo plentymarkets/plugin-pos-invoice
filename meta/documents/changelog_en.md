@@ -38,4 +38,4 @@
 
 ### Functions
 
-- POS Invoice integration for plentymarkets POS
+- POS Invoice integration for plentyPOS
