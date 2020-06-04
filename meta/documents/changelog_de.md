@@ -38,4 +38,4 @@
 
 ### Funktionen
 
-- Integration von POS Rechnungskauf für das plentymarkets POS Kassensystem
+- Integration von POS Rechnungskauf für das plentyPOS Kassensystem
