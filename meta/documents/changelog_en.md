@@ -1,5 +1,12 @@
 # Release Notes for POS Invoice
 
+## v.1.2.4
+
+### Changed
+
+- Default value of payment target set to 0
+
+
 ## v.1.2.3
 
 ### Changed

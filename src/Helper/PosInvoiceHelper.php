@@ -172,6 +172,6 @@ class PosInvoiceHelper
             return (int)$contactClassConfig['payableDueWithin'];
         }
 
-        return (int)$this->configRepository->get(self::PLUGIN_NAME . '.pos.invoice.paymentTarget');
+        return (int)$this->configRepository->get(self::PLUGIN_NAME . '.pos.invoice.paymentTarget', 0);
     }
 }

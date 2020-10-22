@@ -9,7 +9,7 @@
           "required": false,
           "label": "Config.posInvoicePaymentTargetLabel",
           "options": {
-            "defaultValue": null
+            "defaultValue": 0
           }
         },
         "pos.invoice.removeFooter": {
