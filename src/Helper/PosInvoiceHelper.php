@@ -95,6 +95,8 @@ class PosInvoiceHelper
         $removeFooter = $this->configRepository->get(self::PLUGIN_NAME . '.pos.invoice.removeFooter');
         $removeFooter === 'true' ? $config['removeFooter'] = true : $config['removeFooter'] = false;
 
+        $config['paymentTarget'] = $this->configRepository->get(self::PLUGIN_NAME . '.pos.invoice.paymentTarget', 0);
+
         return $config;
     }
 
