@@ -33,7 +33,7 @@ Das Plugin plentyPOS Kauf auf Rechnung wird im plentymarkets Backend bereitgeste
 * In der plentymarkets App müssen die plentyBase Verbindungsdaten gespeichert sein. <br>
 → Wie du die plentyBase Verbindungsdaten in der App speicherst, erfährst du in der Beschreibung des Plugins [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053#140).
 * Im plentymarkets Backend muss im Menü **System » Einstellungen » Drucker** ein Drucker konfiguriert sein, über den die Rechnung gedruckt wird.
-* In den Druckereinstellungen von plentyPOS muss [der Drucker für den Rechnungsdruck](https://knowledge.plentymarkets.com/omni-channel/pos/pos-einrichten#1020) gewählt werden.
+* In den Druckereinstellungen von plentyPOS muss [der Drucker für den Rechnungsdruck](https://knowledge.plentymarkets.com/de-de/manual/main/pos/pos-einrichten.html#1020) gewählt werden.
 
 ## Zahlungsziel festlegen<a id="20." name="20.">
 
@@ -90,7 +90,7 @@ plentymarkets ermöglicht es dir, plentyPOS Rechnungen per Ereignisaktion automa
 
 #### E-Mail-Vorlage erstellen
 
-Damit Rechnungen automatisch versendet werden können, benötigst du eine [E-Mail-Vorlage](https://knowledge.plentymarkets.com/crm/e-mails-versenden#1200). Du kannst die vorhandene [E-Mail-Vorlage](https://knowledge.plentymarkets.com/crm/e-mails-versenden#1200) von plentymarkets für den Rechnungsversand verwenden. Alternativ gehe wie unten beschrieben vor, um eine eigene E-Mail-Vorlage zu erstellen.
+Damit Rechnungen automatisch versendet werden können, benötigst du eine [E-Mail-Vorlage](https://knowledge.plentymarkets.com/de-de/manual/main/crm/e-mails-versenden.html#1200). Du kannst die vorhandene E-Mail-Vorlage von plentymarkets für den Rechnungsversand verwenden. Alternativ gehe wie unten beschrieben vor, um eine eigene E-Mail-Vorlage zu erstellen.
 
 ##### E-Mail-Vorlage erstellen:
 
@@ -102,7 +102,7 @@ Damit Rechnungen automatisch versendet werden können, benötigst du eine [E-Mai
 5. Klicke auf **Speichern**. <br>
 → Die E-Mail-Vorlage wird erstellt und je nach gewähltem Eigner in einem der drei Ordner gespeichert.
 6. Wähle den PDF-Anhang **Rechnung**.
-7. Nimm de die weiteren Einstellungen vor. Beachte die Erläuterungen unter [Neue E-Mail-Vorlage erstellen](https://knowledge.plentymarkets.com/crm/e-mails-versenden#1200).
+7. Nimm de die weiteren Einstellungen vor. Beachte die Erläuterungen unter [Neue E-Mail-Vorlage erstellen](https://knowledge.plentymarkets.com/de-de/manual/main/crm/e-mails-versenden.html#1200).
 8. **Speichere** die Einstellungen.
 
 
@@ -133,4 +133,4 @@ Tabelle 2: Ereignisaktion zum automatischen E-Mail-Versand der Rechnung
 
 ## Anzahlungen über plentyPOS entgegennehmen<a id="60." name="60.">
 
-Mit plentyPOS kannst du unkompliziert Anzahlungen entgegennehmen. Dies ist zum Beispiel bei Artikeln mit hohen Verkaufspreisen oder bei Ware, die speziell für Kunden angefertigt wird, sinnvoll. Zur Abwicklungen von Anzahlungen muss das Plugin plentyPOS Kauf auf Rechnung aktiviert sowie bereits ein Kontaktdatensatz für den betreffenden Kunden vorhanden sein. In unserem [Handbuch](https://knowledge.plentymarkets.com/pos/pos-kassenbenutzer#440) findest du eine Anleitung zum Umgang mit Anzahlungen.
+Mit plentyPOS kannst du unkompliziert Anzahlungen entgegennehmen. Dies ist zum Beispiel bei Artikeln mit hohen Verkaufspreisen oder bei Ware, die speziell für Kunden angefertigt wird, sinnvoll. Zur Abwicklungen von Anzahlungen muss das Plugin plentyPOS Kauf auf Rechnung aktiviert sowie bereits ein Kontaktdatensatz für den betreffenden Kunden vorhanden sein. In unserem [Handbuch](https://knowledge.plentymarkets.com/de-de/manual/main/pos/pos-kassenbenutzer.html#440) findest du eine Anleitung zum Umgang mit Anzahlungen.

@@ -1,5 +1,12 @@
 # Release Notes für POS Kauf auf Rechnung
 
+## v.1.2.4
+
+### Geändert
+
+- Anpassungen im User Guide
+
+
 ## v.1.2.3
 
 ### Geändert

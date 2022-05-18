@@ -32,7 +32,7 @@ Provision the plugin plentyPOS Invoice in the plentymarkets back end. To print i
 * The plentyBase connection details must be saved in the plentymarkets app. <br/>
 → Find out how to save the plentyBase connection data in the plugin description of the plugin [plentyBase](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053#140).
 * A printer for printing the invoices must be configured in the plentymarkets back end menu **System » Settings » Printers**.
-* The [printer for printing the invoices](https://knowledge.plentymarkets.com/en/omni-channel/pos/pos-einrichten#1020) must be selected in the printer settings of plentyPOS.
+* The [printer for printing the invoices](https://knowledge.plentymarkets.com/en-gb/manual/main/pos/integrating-plentymarkets-pos.html#1020) must be selected in the printer settings of plentyPOS.
 
 ## Selecting the payment due date<a id="20." name="20.">
 
@@ -89,7 +89,7 @@ plentymarkets allows you to set up an event procedure that automatically emails 
 
 #### Creating an email template
 
-You need an [email template](https://knowledge.plentymarkets.com/crm/sending-emails#1200) that is sent when an invoice is generated. You can use the existing [email template](https://knowledge.plentymarkets.com/crm/sending-emails#1200) for sending invoices. Alternatively, proceed as described below to create a custom email template.
+You need an [email template](https://knowledge.plentymarkets.com/en-gb/manual/main/crm/sending-emails.html#1200) that is sent when an invoice is generated. You can use the existing email template for sending invoices. Alternatively, proceed as described below to create a custom email template.
 
 ##### Creating an email template:
 
@@ -101,7 +101,7 @@ You need an [email template](https://knowledge.plentymarkets.com/crm/sending-ema
 5. Click on **Save**. <br/>
 → The email template is created and saved in one of the three folders based on the owner you selected.
 6. Select the PDF attachment **Invoice**.
-7. Carry out the additional settings. Pay attention to the information on [creating a new email template](https://knowledge.plentymarkets.com/crm/sending-emails#1200).
+7. Carry out the additional settings. Pay attention to the information on [creating a new email template](https://knowledge.plentymarkets.com/en-gb/manual/main/crm/sending-emails.html#1200).
 8. **Save** the settings.
 
 
@@ -129,4 +129,6 @@ Now, create an event procedure that triggers an email to the customer when an in
 
 ## Accepting down payments via plentyPOS<a id="60." name="60.">
 
-With plentyPOS, you can easily accept down payments for orders. Down payments make sense with items that have high sales prices or for goods that are specifically made according to customer wishes. To accept down payments, the plugin plentyPOS Invoice has to be activated in the plentymarkets back end. Also, customer data must exist for the customer wishing to make a down payment. Refer to our [manual](https://knowledge.plentymarkets.com/en/pos/plentymarkets-pos-for-pos-users#440) for an instruction on how to deal with down payments.
+With plentyPOS, you can easily accept down payments for orders. Down payments make sense with items that have high sales prices or for goods that are specifically made according to customer wishes. To accept down payments, the plugin plentyPOS Invoice has to be activated in the plentymarkets back end. Also, customer data must exist for the customer wishing to make a down payment.
+
+Refer to our [manual](https://knowledge.plentymarkets.com/en-gb/manual/main/pos/plentymarkets-pos-for-pos-users.html#440) for an instruction on how to deal with down payments.
