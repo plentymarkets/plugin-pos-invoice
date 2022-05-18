@@ -3,7 +3,7 @@
   "namespace"         : "PosInvoice",
   "marketplaceName"   : {"de":"plentyPOS Kauf auf Rechnung", "en":"plentyPOS Invoice"},
   "type"              : "payment",
-  "version"           : "1.2.3",
+  "version"           : "1.2.4",
   "license"           : "AGPL-3.0",
   "pluginIcon"        : "icon_plugin_xs.png",
   "price"             : 0.00,
