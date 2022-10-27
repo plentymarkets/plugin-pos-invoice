@@ -55,6 +55,9 @@ class PosInvoiceHelper
     public function createMopIfNotExist()
     {
         if ($this->getPaymentMethodId() == self::NO_PAYMENTMETHOD_FOUND) {
+
+            $this->getLogger('PosInvoiceHelper_createMopIfNotExist')->debug("PosInvoice::translation.createMop");
+
             $paymentMethodData = array(
                 'pluginKey' => self::PLUGIN_KEY,
                 'paymentKey' => self::PAYMENT_KEY,
@@ -70,46 +73,20 @@ class PosInvoiceHelper
      */
     public function getPaymentMethodId()
     {
-
         if ($this->paymentMethodId > 0) {
-            $this->getLogger("PosInvoiceHelper_getPaymentMethodId")->debug('PosInvoice::translation.loadedContact',
-                [
-                    'cachedMethodId' => $this->paymentMethodId,
-                ]
-            );
-
             return $this->paymentMethodId;
         }
 
         $paymentMethods = $this->paymentMethodRepository->allForPlugin(self::PLUGIN_KEY);
 
-        $this->getLogger("PosInvoiceHelper_getPaymentMethodId")->debug('PosInvoice::translation.loadedContact',
-            [
-                'pluginMethods' => $paymentMethods,
-            ]
-        );
-
         if (!is_null($paymentMethods)) {
             foreach ($paymentMethods as $paymentMethod) {
                 if ($paymentMethod->paymentKey == self::PAYMENT_KEY) {
                     $this->paymentMethodId = $paymentMethod->id;
-
-                    $this->getLogger("PosInvoiceHelper_getPaymentMethodId")->debug('PosInvoice::translation.loadedContact',
-                        [
-                            'loadedMethodId' => $paymentMethod->id,
-                        ]
-                    );
-
                     return $paymentMethod->id;
                 }
             }
         }
-
-        $this->getLogger("PosInvoiceHelper_getPaymentMethodId")->debug('PosInvoice::translation.loadedContact',
-            [
-                'loadedMethodId' => self::NO_PAYMENTMETHOD_FOUND,
-            ]
-        );
 
         return self::NO_PAYMENTMETHOD_FOUND;
     }
