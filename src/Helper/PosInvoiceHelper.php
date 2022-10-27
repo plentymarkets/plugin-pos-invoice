@@ -8,6 +8,7 @@ use Plenty\Modules\Account\Models\Account;
 use Plenty\Modules\Payment\Method\Contracts\PaymentMethodRepositoryContract;
 use Plenty\Plugin\ConfigRepository;
 use PosInvoice\Services\ContactService;
+use Plenty\Plugin\Log\Loggable;
 
 /**
  * Class PosInvoiceHelper
@@ -15,6 +16,8 @@ use PosInvoice\Services\ContactService;
  */
 class PosInvoiceHelper
 {
+    use Loggable;
+
     const PLUGIN_NAME = 'PosInvoice';
     const PLUGIN_KEY = "plenty_pos_invoice";
     const NO_PAYMENTMETHOD_FOUND = 'no_paymentmethod_found';
@@ -123,8 +126,13 @@ class PosInvoiceHelper
         /** @var Contact $contact */
         $contact = $this->contactService->getContact($contactId);
 
+        $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->error('loadedContact', $contact);
+
         /** @var ContactAllowedMethodOfPayment $allowedMethodOfPayment */
         foreach ($contact->allowedMethodsOfPayment as $allowedMethodOfPayment) {
+            
+            $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->error('contact::allowedMethodsOfPayment', $allowedMethodOfPayment);
+
             /* check if invoice allowed for contact */
             if ($allowedMethodOfPayment->methodOfPaymentId == 2 && $allowedMethodOfPayment->allowed == 0) {
                 return false;
@@ -132,6 +140,7 @@ class PosInvoiceHelper
         }
 
         $contactClassConfig = $this->contactService->getContactInvoiceClassData($contactId);
+        $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->error('looking at customer class', $contactClassConfig);
 
         if (!empty($contactClassConfig['allowedMethodOfPaymentIdsList']) && is_array($contactClassConfig['allowedMethodOfPaymentIdsList'])) {
             /* check if invoice allowed for contact class */
