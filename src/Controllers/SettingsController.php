@@ -5,6 +5,7 @@ namespace PosInvoice\Controllers;
 use Plenty\Plugin\Http\Request;
 use PosInvoice\Helper\PosInvoiceHelper;
 use Plenty\Plugin\Controller;
+use Plenty\Plugin\Log\Loggable;
 
 /**
  * Class SettingsController
@@ -12,6 +13,9 @@ use Plenty\Plugin\Controller;
  */
 class SettingsController extends Controller
 {
+
+    use Loggable;
+
     /** @var PosInvoiceHelper $posInvoiceHelper */
     private $posInvoiceHelper;
 
@@ -30,6 +34,8 @@ class SettingsController extends Controller
      */
     public function loadSettings(Request $request)
     {
+        $this->getLogger("SettingsController_loadSettings")->debug('PosInvoice::translation.loadedContact', $request);
+
         $paymentMethod = [];
         $paymentMethod['id'] = $this->posInvoiceHelper->getPaymentMethodId();
         $paymentMethod['pluginKey'] = $this->posInvoiceHelper::PLUGIN_KEY;

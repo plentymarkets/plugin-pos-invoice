@@ -70,20 +70,46 @@ class PosInvoiceHelper
      */
     public function getPaymentMethodId()
     {
+
         if ($this->paymentMethodId > 0) {
+            $this->getLogger("PosInvoiceHelper_getPaymentMethodId")->debug('PosInvoice::translation.loadedContact',
+                [
+                    'cachedMethodId' => $this->paymentMethodId,
+                ]
+            );
+
             return $this->paymentMethodId;
         }
 
         $paymentMethods = $this->paymentMethodRepository->allForPlugin(self::PLUGIN_KEY);
 
+        $this->getLogger("PosInvoiceHelper_getPaymentMethodId")->debug('PosInvoice::translation.loadedContact',
+            [
+                'pluginMethods' => $paymentMethods,
+            ]
+        );
+
         if (!is_null($paymentMethods)) {
             foreach ($paymentMethods as $paymentMethod) {
                 if ($paymentMethod->paymentKey == self::PAYMENT_KEY) {
                     $this->paymentMethodId = $paymentMethod->id;
+
+                    $this->getLogger("PosInvoiceHelper_getPaymentMethodId")->debug('PosInvoice::translation.loadedContact',
+                        [
+                            'loadedMethodId' => $paymentMethod->id,
+                        ]
+                    );
+
                     return $paymentMethod->id;
                 }
             }
         }
+
+        $this->getLogger("PosInvoiceHelper_getPaymentMethodId")->debug('PosInvoice::translation.loadedContact',
+            [
+                'loadedMethodId' => self::NO_PAYMENTMETHOD_FOUND,
+            ]
+        );
 
         return self::NO_PAYMENTMETHOD_FOUND;
     }
@@ -126,12 +152,12 @@ class PosInvoiceHelper
         /** @var Contact $contact */
         $contact = $this->contactService->getContact($contactId);
 
-        $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->debug('PosInvoice::translation.loadedContact', $contact);
+        $this->getLogger("PosInvoiceHelper_isAllowedForContact")->debug("PosInvoice::translation.loadedContact", $contact);
 
         /** @var ContactAllowedMethodOfPayment $allowedMethodOfPayment */
         foreach ($contact->allowedMethodsOfPayment as $allowedMethodOfPayment) {
 
-            $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->debug('PosInvoice::translation.allowedMethodsOfPayment', $allowedMethodOfPayment);
+            $this->getLogger("PosInvoiceHelper_isAllowedForContact")->debug("PosInvoice::translation.allowedMethodsOfPayment", $allowedMethodOfPayment);
 
             /* check if invoice allowed for contact */
             if ($allowedMethodOfPayment->methodOfPaymentId == 2 && $allowedMethodOfPayment->allowed == 0) {
@@ -140,7 +166,7 @@ class PosInvoiceHelper
         }
 
         $contactClassConfig = $this->contactService->getContactInvoiceClassData($contactId);
-        $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->debug('PosInvoice::translation.customerClass', $contactClassConfig);
+        $this->getLogger("PosInvoiceHelper_isAllowedForContact")->debug("PosInvoice::translation.customerClass", $contactClassConfig);
 
         if (!empty($contactClassConfig['allowedMethodOfPaymentIdsList']) && is_array($contactClassConfig['allowedMethodOfPaymentIdsList'])) {
             /* check if invoice allowed for contact class */
