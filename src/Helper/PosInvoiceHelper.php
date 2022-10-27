@@ -126,12 +126,12 @@ class PosInvoiceHelper
         /** @var Contact $contact */
         $contact = $this->contactService->getContact($contactId);
 
-        $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->error('loadedContact', $contact);
+        $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->debug('PosInvoice::translation.loadedContact', $contact);
 
         /** @var ContactAllowedMethodOfPayment $allowedMethodOfPayment */
         foreach ($contact->allowedMethodsOfPayment as $allowedMethodOfPayment) {
-            
-            $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->error('contact::allowedMethodsOfPayment', $allowedMethodOfPayment);
+
+            $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->debug('PosInvoice::translation.allowedMethodsOfPayment', $allowedMethodOfPayment);
 
             /* check if invoice allowed for contact */
             if ($allowedMethodOfPayment->methodOfPaymentId == 2 && $allowedMethodOfPayment->allowed == 0) {
@@ -140,7 +140,7 @@ class PosInvoiceHelper
         }
 
         $contactClassConfig = $this->contactService->getContactInvoiceClassData($contactId);
-        $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->error('looking at customer class', $contactClassConfig);
+        $this->getLogger(__CLASS__ . '::' . __FUNCTION__)->debug('PosInvoice::translation.customerClass', $contactClassConfig);
 
         if (!empty($contactClassConfig['allowedMethodOfPaymentIdsList']) && is_array($contactClassConfig['allowedMethodOfPaymentIdsList'])) {
             /* check if invoice allowed for contact class */
