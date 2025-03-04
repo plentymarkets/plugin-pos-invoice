@@ -1,11 +1,11 @@
-# User Guide für das Plugin plentyPOS Kauf auf Rechnung<a id="10." name="10.">
+# User Guide für das Plugin POS Kauf auf Rechnung<a id="10." name="10.">
 
-Mit diesem Plugin bindest du die Zahlungsart **Rechnung** in deine plentyPOS Kassen ein. Wenn du das Plugin aktivierst, haben Bestandskunden, die Artikel über deine plentyPOS Kasse kaufen, die Möglichkeit zum Kauf auf Rechnung.
+Mit diesem Plugin bindest du die Zahlungsart **Rechnung** in deine POS Kassen ein. Wenn du das Plugin aktivierst, haben Bestandskunden, die Artikel über deine POS Kasse kaufen, die Möglichkeit zum Kauf auf Rechnung.
 
 ## Hinweis zu Retouren<a id="05." name="05.">
 
 <div class="alert alert-warning" role="alert">
-  Aufträge mit Kauf auf Rechnung können bis zum nächsten Tagesabschluss wie gewohnt storniert werden. Auch die Retoure von auf Rechnung gekauften Artikeln ist ab Version 1.8 der plentymarkets App möglich. Bei Teilzahlung errechnet die Kasse automatisch, welchen Betrag Kunden zurückbekommen.
+  Aufträge mit Kauf auf Rechnung können bis zum nächsten Tagesabschluss wie gewohnt storniert werden. Auch die Retoure von auf Rechnung gekauften Artikeln ist ab Version 1.8 der POS App möglich. Bei Teilzahlung errechnet die Kasse automatisch, welchen Betrag Kunden zurückbekommen.
 </div>
 
 ## Inhaltsverzeichnis
@@ -16,34 +16,34 @@ Mit diesem Plugin bindest du die Zahlungsart **Rechnung** in deine plentyPOS Kas
 * <a href="#30."><b>Zahlungsart in Kundenklasse erlauben</b></a>
 * <a href="#40."><b>Hinweise zur Rechnungsvorlage</b></a>
 * <a href="#50."><b>Rechnung per E-Mail an Bestandskunden senden</b></a>
-* <a href="#60."><b>Anzahlungen über plentyPOS entgegennehmen</b></a>
+* <a href="#60."><b>Anzahlungen über POS entgegennehmen</b></a>
 
 
 ## Voraussetzungen<a id="10." name="10.">
 
-Das Plugin plentyPOS Kauf auf Rechnung wird im plentymarkets Backend bereitgestellt. Um von der Kasse aus Rechnungen im DIN-A4-Format zu drucken, benötigst du zusätzlich das Plugin [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). plentyBase stellt eine Verbindung zwischen der plentymarkets App, der Druckerkonfiguration im plentymarkets Backend und lokalen Druckern her. Für den Kauf auf Rechnung über plentyPOS gelten daher die folgenden technischen Voraussetzungen:
+Das Plugin POS Kauf auf Rechnung wird im PlentyONE Backend bereitgestellt. Um von der Kasse aus Rechnungen im DIN-A4-Format zu drucken, benötigst du zusätzlich das Plugin [Base](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). Base stellt eine Verbindung zwischen der POS App, der Druckerkonfiguration im PlentyONE Backend und lokalen Druckern her. Für den Kauf auf Rechnung über POS gelten daher die folgenden technischen Voraussetzungen:
 
-* plentyBase muss auf einem Rechner im Netzwerk installiert sein. <br>
+* Base muss auf einem Rechner im Netzwerk installiert sein. <br>
 → Die Installationsdatei lädst du im [plentyMarketplace](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053) herunter.
-* plentyBase muss auf dem Rechner konfiguriert sein. <br>
-→ Die Konfigurationsanleitung findest du in der Beschreibung des Plugins [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). <br>
-  *_Hinweis:_* Aktiviere bei der Konfiguration die Option **HTTP-Server**. Nur so kann plentyPOS mit plentyBase kommunizieren.
-* plentyBase muss auf dem Rechner gestartet sein. <br>
-  *_Tipp:_* Konfiguriere plentyBase so, dass plentyBase beim Starten des Rechners automatisch gestartet wird.
-* In der plentymarkets App müssen die plentyBase Verbindungsdaten gespeichert sein. <br>
-→ Wie du die plentyBase Verbindungsdaten in der App speicherst, erfährst du in der Beschreibung des Plugins [plentyBase](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053#140).
-* Im plentymarkets Backend muss im Menü **System » Einstellungen » Drucker** ein Drucker konfiguriert sein, über den die Rechnung gedruckt wird.
-* In den Druckereinstellungen von plentyPOS muss [der Drucker für den Rechnungsdruck](https://knowledge.plentymarkets.com/de-de/manual/main/pos/pos-einrichten.html#1020) gewählt werden.
+* Base muss auf dem Rechner konfiguriert sein. <br>
+→ Die Konfigurationsanleitung findest du in der Beschreibung des Plugins [Base](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). <br>
+  *_Hinweis:_* Aktiviere bei der Konfiguration die Option **HTTP-Server**. Nur so kann POS mit Base kommunizieren.
+* Base muss auf dem Rechner gestartet sein. <br>
+  *_Tipp:_* Konfiguriere Base so, dass Base beim Starten des Rechners automatisch gestartet wird.
+* In der POS App müssen die Base Verbindungsdaten gespeichert sein. <br>
+→ Wie du die Base Verbindungsdaten in der App speicherst, erfährst du in der Beschreibung des Plugins [Base](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053#140).
+* Im PlentyONE Backend muss im Menü **System » Einstellungen » Drucker** ein Drucker konfiguriert sein, über den die Rechnung gedruckt wird.
+* In den Druckereinstellungen von POS muss [der Drucker für den Rechnungsdruck](https://knowledge.plentymarkets.com/de-de/manual/main/pos/pos-einrichten.html#1020) gewählt werden.
 
 ## Zahlungsziel festlegen<a id="20." name="20.">
 
-In den Plugin-Einstellungen wählst du ein Zahlungsziel für Rechnungen für Kassenaufträge. Bei der Erstellung der Rechnung hat ein am Datensatz des Kunden gespeicherte Zahlungsziel oberste Priorität. Ist kein kundenspezifisches Zahlungsziel festgelegt, wird geprüft, ob für die Kundenklasse ein Zahlungsziel gespeichert ist. Erst wenn es auch für die Kundenklasse kein Zahlungsziel gibt, wird das im Plugin gespeicherte Zahlungsziel herangezogen.
+In den Plugin-Einstellungen wählst du ein Zahlungsziel für Rechnungen von Kassenaufträgen. Bei der Erstellung der Rechnung hat ein am Datensatz des Kunden gespeicherte Zahlungsziel oberste Priorität. Ist kein kundenspezifisches Zahlungsziel festgelegt, wird geprüft, ob für die Kundenklasse ein Zahlungsziel gespeichert ist. Erst wenn es auch für die Kundenklasse kein Zahlungsziel gibt, wird das im Plugin gespeicherte Zahlungsziel herangezogen.
 
 ##### Zahlungsziel festlegen:
 
 1. Öffne das Menü **Plugins » Plugin-Übersicht**. <br>
 → Die Plugin-Übersicht wird geöffnet.
-1. Klicke auf das Plugin **plentyPOS Kauf auf Rechnung**.
+1. Klicke auf das Plugin **POS Kauf auf Rechnung**.
 2. Wechsle in die Ansicht **Konfiguration » Grundeinstellungen**.
 3. Gib in das Feld **Zahlungsziel (in Tagen)** ein Zahlungsziel ein.
 4. **Speichere** die Einstellung. <br>
@@ -57,13 +57,13 @@ Wenn du mit Kundenklassen arbeitest, aktiviere nun die Zahlungsart in den Kunden
 ##### Zahlungsart in Kundenklasse erlauben:
 
 1. Öffne das Menü **System » CRM » Kundenklassen**.
-2. Klappe die Kundenklasse für plentyPOS Aufträge auf.
+2. Klappe die Kundenklasse für POS Aufträge auf.
 3. Klicke mit der Maus auf die Zahlungsart, um sie zu aktivieren.
 4. **Speichere** die Einstellungen.
 
 ## Rechnungsvorlage anpassen<a id="40." name="40.">
 
-Die Unternehmensdaten auf der Rechnungsvorlage werden aus den folgenden Menüs des plentymarkets Backend aufgefüllt:
+Die Unternehmensdaten auf der Rechnungsvorlage werden aus den folgenden Menüs des PlentyONE Backend aufgefüllt:
 
 | Unternehmensdaten | Menü |
 |---|---|
@@ -72,13 +72,13 @@ Die Unternehmensdaten auf der Rechnungsvorlage werden aus den folgenden Menüs d
 | Bankdaten | **System » Einstellungen » Bank** |
 | Umsatzsteuer-ID | **System » Mandant » Mandant öffnen » Standorte » Standort öffnen » Buchhaltung » Tab: Umsatzsteuersätze** |
 
-Die Rechnungsvorlage für plentyPOS Rechnungen ist nicht anpassbar. Du kannst allerdings die Fußzeile unterdrücken, wenn du Rechnungen auf vorgedrucktem Briefpapier drucken möchtest, das bereits deine Unternehmensdaten enthält.
+Die Rechnungsvorlage für POS Rechnungen ist nicht anpassbar. Du kannst allerdings die Fußzeile unterdrücken, wenn du Rechnungen auf vorgedrucktem Briefpapier drucken möchtest, das bereits deine Unternehmensdaten enthält.
 
 ##### Fußzeile auf Rechungsdokument unterdrücken:
 
 1. Öffne das Menü **Plugins » Plugin-Übersicht**. <br>
 → Die Plugin-Übersicht wird geöffnet.
-1. Klicke auf das Plugin **plentyPOS Kauf auf Rechnung**.
+1. Klicke auf das Plugin **POS Kauf auf Rechnung**.
 2. Wechsle in die Ansicht **Konfiguration » Grundeinstellungen**.
 3. Aktiviere die Option **Fußzeile auf Rechungsdokument unterdrücken**.
 4. **Speichere** die Einstellung. <br>
@@ -86,11 +86,11 @@ Die Rechnungsvorlage für plentyPOS Rechnungen ist nicht anpassbar. Du kannst al
 
 ## Rechnung per E-Mail an Bestandskunden senden<a id="50." name="50.">
 
-plentymarkets ermöglicht es dir, plentyPOS Rechnungen per Ereignisaktion automatisch an die am Kundendatensatz gespeicherte E-Mail-Adresse zu senden. Dazu nutzt du die E-Mail-Vorlage für den Rechnungsversand von plentymarkets oder erstellst eine eigene E-Mail-Vorlage. Wenn du eine E-Mail-Vorlage hast, mit der du arbeiten möchtest, erstelle eine Ereignisaktion. Für Kassenaufträge, die im Offline-Modus erstellt werden, wird die Ereignisaktion jedoch erst ausgeführt, wenn die Kassenaufträge in das plentymarkets Backend hochgeladen werden. Prüfe vor der Einrichtung des automatischen Rechnungsversands die aktuellen gesetzlichen Bestimmungen zum Versand von E-Mails an Kunden.
+PlentyONE ermöglicht es dir, POS Rechnungen per Ereignisaktion automatisch an die am Kundendatensatz gespeicherte E-Mail-Adresse zu senden. Dazu nutzt du die E-Mail-Vorlage für den Rechnungsversand von PlentyONE oder erstellst eine eigene E-Mail-Vorlage. Wenn du eine E-Mail-Vorlage hast, mit der du arbeiten möchtest, erstelle eine Ereignisaktion. Für Kassenaufträge, die im Offline-Modus erstellt werden, wird die Ereignisaktion jedoch erst ausgeführt, wenn die Kassenaufträge in das PlentyONE Backend hochgeladen werden. Prüfe vor der Einrichtung des automatischen Rechnungsversands die aktuellen gesetzlichen Bestimmungen zum Versand von E-Mails an Kunden.
 
 #### E-Mail-Vorlage erstellen
 
-Damit Rechnungen automatisch versendet werden können, benötigst du eine [E-Mail-Vorlage](https://knowledge.plentymarkets.com/de-de/manual/main/crm/e-mails-versenden.html#1200). Du kannst die vorhandene E-Mail-Vorlage von plentymarkets für den Rechnungsversand verwenden. Alternativ gehe wie unten beschrieben vor, um eine eigene E-Mail-Vorlage zu erstellen.
+Damit Rechnungen automatisch versendet werden können, benötigst du eine [E-Mail-Vorlage](https://knowledge.plentymarkets.com/de-de/manual/main/crm/e-mails-versenden.html#1200). Du kannst die vorhandene E-Mail-Vorlage von PlentyONE für den Rechnungsversand verwenden. Alternativ gehe wie unten beschrieben vor, um eine eigene E-Mail-Vorlage zu erstellen.
 
 ##### E-Mail-Vorlage erstellen:
 
@@ -108,7 +108,7 @@ Damit Rechnungen automatisch versendet werden können, benötigst du eine [E-Mai
 
 ### Ereignisaktion erstellen
 
-Erstelle nun eine Ereignisaktion, über die die E-Mail-Vorlage versendet wird, wenn eine Rechnung über plentyPOS generiert wird.
+Erstelle nun eine Ereignisaktion, über die die E-Mail-Vorlage versendet wird, wenn eine Rechnung über POS generiert wird.
 
 ##### Ereignisaktion einrichten
 
@@ -131,6 +131,6 @@ Erstelle nun eine Ereignisaktion, über die die E-Mail-Vorlage versendet wird, w
 
 Tabelle 2: Ereignisaktion zum automatischen E-Mail-Versand der Rechnung
 
-## Anzahlungen über plentyPOS entgegennehmen<a id="60." name="60.">
+## Anzahlungen über POS entgegennehmen<a id="60." name="60.">
 
-Mit plentyPOS kannst du unkompliziert Anzahlungen entgegennehmen. Dies ist zum Beispiel bei Artikeln mit hohen Verkaufspreisen oder bei Ware, die speziell für Kunden angefertigt wird, sinnvoll. Zur Abwicklungen von Anzahlungen muss das Plugin plentyPOS Kauf auf Rechnung aktiviert sowie bereits ein Kontaktdatensatz für den betreffenden Kunden vorhanden sein. In unserem [Handbuch](https://knowledge.plentymarkets.com/de-de/manual/main/pos/pos-kassenbenutzer.html#440) findest du eine Anleitung zum Umgang mit Anzahlungen.
+Mit POS kannst du unkompliziert Anzahlungen entgegennehmen. Dies ist zum Beispiel bei Artikeln mit hohen Verkaufspreisen oder bei Ware, die speziell für Kunden angefertigt wird, sinnvoll. Zur Abwicklung von Anzahlungen muss das Plugin POS Kauf auf Rechnung aktiviert sowie bereits ein Kontaktdatensatz für den betreffenden Kunden vorhanden sein. In unserem [Handbuch](https://knowledge.plentymarkets.com/de-de/manual/main/pos/pos-kassenbenutzer.html#440) findest du eine Anleitung zum Umgang mit Anzahlungen.
