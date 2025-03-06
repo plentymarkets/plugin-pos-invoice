@@ -2,8 +2,8 @@
   "name": "PosInvoice",
   "namespace": "PosInvoice",
   "marketplaceName": {
-    "de": "plentyPOS Kauf auf Rechnung",
-    "en": "plentyPOS Invoice"
+    "de": "POS Kauf auf Rechnung",
+    "en": "POS Invoice"
   },
   "type": "payment",
   "version": "1.2.5",
@@ -13,9 +13,9 @@
   "license": "AGPL-3.0",
   "pluginIcon": "icon_plugin_xs.png",
   "price": 0.00,
-  "description": "Invoice plugin for PlentyONE POS",
+  "description": "Invoice plugin for POS",
   "shortDescription": {
-    "de": "Mit dem Plugin POS Kauf auf Rechnung bietest du Bestandskunden den Rechnungskauf über dein PlentyONE POS Kassensystem an.",
+    "de": "Mit dem Plugin POS Kauf auf Rechnung bietest du Bestandskunden den Rechnungskauf über dein POS Kassensystem an.",
     "en": "The plugin POS Invoice provides the payment method Invoice for your POS system."
   },
   "categories": [
