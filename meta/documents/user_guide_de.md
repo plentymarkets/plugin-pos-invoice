@@ -56,7 +56,7 @@ Wenn du mit Kundenklassen arbeitest, aktiviere nun die Zahlungsart in den Kunden
 
 ##### Zahlungsart in Kundenklasse erlauben:
 
-1. Öffne das Menü **System » CRM » Kundenklassen**.
+1. Öffne das Menü **Einrichtung » CRM » Klassen**.
 2. Klappe die Kundenklasse für POS Aufträge auf.
 3. Klicke mit der Maus auf die Zahlungsart, um sie zu aktivieren.
 4. **Speichere** die Einstellungen.
@@ -65,12 +65,12 @@ Wenn du mit Kundenklassen arbeitest, aktiviere nun die Zahlungsart in den Kunden
 
 Die Unternehmensdaten auf der Rechnungsvorlage werden aus den folgenden Menüs des PlentyONE Backend aufgefüllt:
 
-| Unternehmensdaten | Menü |
-|---|---|
-| Adressdaten | **System » Mandant » Mandant öffnen » POS » Kasse öffnen » Tab: Grundeinstellungen » Bereich: Standort** |
-| Telefon, Telefax, E-Mail, Hotline | **System » Einstellungen » Stammdaten** |
-| Bankdaten | **System » Einstellungen » Bank** |
-| Umsatzsteuer-ID | **System » Mandant » Mandant öffnen » Standorte » Standort öffnen » Buchhaltung » Tab: Umsatzsteuersätze** |
+| Unternehmensdaten | Menü                                                                                                            |
+|---|-----------------------------------------------------------------------------------------------------------------|
+| Adressdaten | **Einrichtung » POS » Mandant öffnen » Kasse öffnen » Tab: Grundeinstellungen » Bereich: Standort**             |
+| Telefon, Telefax, E-Mail, Hotline | **Einrichtung » Einstellungen » Stammdaten**                                                                    |
+| Bankdaten | **Einrichtung » Einstellungen » Bank**                                                                          |
+| Umsatzsteuer-ID | **Einrichtung » Mandant » Mandant öffnen » Standorte » Standort öffnen » Buchhaltung » Tab: Umsatzsteuersätze** |
 
 Die Rechnungsvorlage für POS Rechnungen ist nicht anpassbar. Du kannst allerdings die Fußzeile unterdrücken, wenn du Rechnungen auf vorgedrucktem Briefpapier drucken möchtest, das bereits deine Unternehmensdaten enthält.
 
@@ -94,7 +94,7 @@ Damit Rechnungen automatisch versendet werden können, benötigst du eine [E-Mai
 
 ##### E-Mail-Vorlage erstellen:
 
-1. Öffne das Menü **System » Mandant » Mandant wählen » E-Mail » Vorlagen**.
+1. Öffne das Menü **Einrichtung » Mandant » Mandant wählen » E-Mail » Vorlagen**.
 2. Klicke auf **Neue E-Mail-Vorlage**. <br>
 → Das Fenster **Neue E-Mail-Vorlage** wird geöffnet.
 3. Gib einen Namen für die Vorlage ein.
@@ -112,7 +112,7 @@ Erstelle nun eine Ereignisaktion, über die die E-Mail-Vorlage versendet wird, w
 
 ##### Ereignisaktion einrichten
 
-1. Öffne das Menü **System » Aufträge » Ereignisse**.
+1. Öffne das Menü **Einrichtung » Aufträge » Ereignisse**.
 2. Klicke auf **Ereignisaktion hinzufügen**. <br>
 → Das Fenster **Neue Ereignisaktion erstellen** wird geöffnet.
 3. Gib einen Namen ein.

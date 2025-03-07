@@ -55,7 +55,7 @@ If you work with customer classes, activate the payment method for all customer 
 
 ##### Permitting the payment method in a customer class:
 
-1. Go to **System » CRM » Customer classes**.
+1. Go to **Setup » CRM » Classes**.
 2. Expand the customer class for POS orders.
 3. Right-click the payment method to activate it.
 4. **Save** the settings.
@@ -64,12 +64,12 @@ If you work with customer classes, activate the payment method for all customer 
 
 The information shown on the invoices is prefilled from the following menus of the PlentyONE back end:
 
-| Company details | Menu |
-|---|---|
-| Address details | **System » Client » Open client » POS » Open POS » Tab: Basic settings » Area: Location** |
-| Telephone, telefax, email, hotline | **System » Settings » Master data** |
-| Bank details | **System » Settings » Bank** |
-| VAT number | **System » Client » Open client » Locations » Open location » Accounting » Tab: VAT rates** |
+| Company details | Menu                                                                                       |
+|---|--------------------------------------------------------------------------------------------|
+| Address details | **Setup » POS » Open client » Open POS » Tab: Basic settings » Area: Location**            |
+| Telephone, telefax, email, hotline | **Setup » Settings » Master data**                                                         |
+| Bank details | **Setup » Settings » Bank**                                                                |
+| VAT number | **Setup » Client » Open client » Locations » Open location » Accounting » Tab: VAT rates** |
 
 You cannot customise the invoice template that is used for POS invoices. However, you can hide the footer if you want to print POS invoices on pre-printed stationery that already contains your company details.
 
@@ -93,7 +93,7 @@ You need an [email template](https://knowledge.plentymarkets.com/en-gb/manual/ma
 
 ##### Creating an email template:
 
-1. Go to **System » Client » Select client » Email » Templates**.
+1. Go to **Setup » Client » Select client » Email » Templates**.
 2. Click on **New email template**. <br/>
 → The **New email template** window will open.
 3. Enter a name for the template.
@@ -111,7 +111,7 @@ Now, create an event procedure that triggers an email to the customer when an in
 
 ##### Setting up an event procedure
 
-1. Go to **System » Orders » Events**.
+1. Go to **Setup » Orders » Events**.
 2. Click on **Add event procedure**. <br/>
 → The **Create new event procedure** window will open.
 3. Enter a name.
