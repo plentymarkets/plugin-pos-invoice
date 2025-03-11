@@ -21,17 +21,17 @@ Mit diesem Plugin bindest du die Zahlungsart **Rechnung** in deine POS Kassen ei
 
 ## Voraussetzungen<a id="10." name="10.">
 
-Das Plugin POS Kauf auf Rechnung wird im PlentyONE Backend bereitgestellt. Um von der Kasse aus Rechnungen im DIN-A4-Format zu drucken, benötigst du zusätzlich das Plugin [Base](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). Base stellt eine Verbindung zwischen der POS App, der Druckerkonfiguration im PlentyONE Backend und lokalen Druckern her. Für den Kauf auf Rechnung über POS gelten daher die folgenden technischen Voraussetzungen:
+Das Plugin POS Kauf auf Rechnung wird im PlentyONE Backend bereitgestellt. Um von der Kasse aus Rechnungen im DIN-A4-Format zu drucken, benötigst du zusätzlich das Plugin [Base](https://marketplace.plentymarkets.com/plugins/integration/Base_5053). Base stellt eine Verbindung zwischen der POS App, der Druckerkonfiguration im PlentyONE Backend und lokalen Druckern her. Für den Kauf auf Rechnung über POS gelten daher die folgenden technischen Voraussetzungen:
 
 * Base muss auf einem Rechner im Netzwerk installiert sein. <br>
-→ Die Installationsdatei lädst du im [plentyMarketplace](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053) herunter.
+→ Die Installationsdatei lädst du im [plentyMarketplace](https://marketplace.plentymarkets.com/plugins/integration/Base_5053) herunter.
 * Base muss auf dem Rechner konfiguriert sein. <br>
-→ Die Konfigurationsanleitung findest du in der Beschreibung des Plugins [Base](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053). <br>
+→ Die Konfigurationsanleitung findest du in der Beschreibung des Plugins [Base](https://marketplace.plentymarkets.com/plugins/integration/Base_5053). <br>
   *_Hinweis:_* Aktiviere bei der Konfiguration die Option **HTTP-Server**. Nur so kann POS mit Base kommunizieren.
 * Base muss auf dem Rechner gestartet sein. <br>
   *_Tipp:_* Konfiguriere Base so, dass Base beim Starten des Rechners automatisch gestartet wird.
 * In der POS App müssen die Base Verbindungsdaten gespeichert sein. <br>
-→ Wie du die Base Verbindungsdaten in der App speicherst, erfährst du in der Beschreibung des Plugins [Base](https://marketplace.plentymarkets.com/plugins/integration/plentyBase_5053#140).
+→ Wie du die Base Verbindungsdaten in der App speicherst, erfährst du in der Beschreibung des Plugins [Base](https://marketplace.plentymarkets.com/plugins/integration/Base_5053#140).
 * Im PlentyONE Backend muss im Menü **System » Einstellungen » Drucker** ein Drucker konfiguriert sein, über den die Rechnung gedruckt wird.
 * In den Druckereinstellungen von POS muss [der Drucker für den Rechnungsdruck](https://knowledge.plentymarkets.com/de-de/manual/main/pos/pos-einrichten.html#1020) gewählt werden.
 
@@ -134,3 +134,7 @@ Tabelle 2: Ereignisaktion zum automatischen E-Mail-Versand der Rechnung
 ## Anzahlungen über POS entgegennehmen<a id="60." name="60.">
 
 Mit POS kannst du unkompliziert Anzahlungen entgegennehmen. Dies ist zum Beispiel bei Artikeln mit hohen Verkaufspreisen oder bei Ware, die speziell für Kunden angefertigt wird, sinnvoll. Zur Abwicklung von Anzahlungen muss das Plugin POS Kauf auf Rechnung aktiviert sowie bereits ein Kontaktdatensatz für den betreffenden Kunden vorhanden sein. In unserem [Handbuch](https://knowledge.plentymarkets.com/de-de/manual/main/pos/pos-kassenbenutzer.html#440) findest du eine Anleitung zum Umgang mit Anzahlungen.
+
+## Lizenz
+
+Das gesamte Projekt unterliegt der GNU AFFERO GENERAL PUBLIC LICENSE – weitere Informationen findest du in der [LICENSE.md](https://github.com/plentymarkets/plugin-pos-invoice/blob/master/LICENSE.md).

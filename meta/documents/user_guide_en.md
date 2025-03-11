@@ -20,17 +20,17 @@ With this plugin, you integrate the payment method **Invoice** into your POS poi
 
 ## Requirements<a id="10." name="10.">
 
-Provision the plugin POS Invoice in the PlentyONE back end. To print invoices in A4/letter format, you also need the plugin [Base](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053). Base establishes a connection between the POS app, the printer configuration in the PlentyONE back end and local printers. As such, the following technical requirements apply for invoice purchases via POS:
+Provision the plugin POS Invoice in the PlentyONE back end. To print invoices in A4/letter format, you also need the plugin [Base](https://marketplace.plentymarkets.com/en/plugins/integration/Base_5053). Base establishes a connection between the POS app, the printer configuration in the PlentyONE back end and local printers. As such, the following technical requirements apply for invoice purchases via POS:
 
 * Base must be installed on the network computer. <br/>
-→ To download the installation file, go to the [plentyMarketplace](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053).
+→ To download the installation file, go to the [plentyMarketplace](https://marketplace.plentymarkets.com/en/plugins/integration/Base_5053).
 * Base must be configured on the computer. <br/>
-→ Find out how to configure Base in the plugin description of the plugin [Base](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053). <br/>
+→ Find out how to configure Base in the plugin description of the plugin [Base](https://marketplace.plentymarkets.com/en/plugins/integration/Base_5053). <br/>
    *_Note:_* During configuration, activate the option **HTTP server**. This ensures that POS can communicate with Base.
 * Base must be running on the computer. <br/>
    *_Recommendation:_* Configure Base to run automatically when the computer is started up.
 * The Base connection details must be saved in the POS app. <br/>
-→ Find out how to save the Base connection data in the plugin description of the plugin [Base](https://marketplace.plentymarkets.com/en/plugins/integration/plentyBase_5053#140).
+→ Find out how to save the Base connection data in the plugin description of the plugin [Base](https://marketplace.plentymarkets.com/en/plugins/integration/Base_5053#140).
 * A printer for printing the invoices must be configured in the PlentyONE back end menu **System » Settings » Printers**.
 * The [printer for printing the invoices](https://knowledge.plentymarkets.com/en-gb/manual/main/pos/integrating-plentymarkets-pos.html#1020) must be selected in the printer settings of POS.
 
@@ -132,3 +132,7 @@ Now, create an event procedure that triggers an email to the customer when an in
 With POS, you can easily accept down payments for orders. Down payments make sense with items that have high sales prices or for goods that are specifically made according to customer wishes. To accept down payments, the plugin POS Invoice has to be activated in the PlentyONE back end. Also, customer data must exist for the customer wishing to make a down payment.
 
 Refer to our [manual](https://knowledge.plentymarkets.com/en-gb/manual/main/pos/plentymarkets-pos-for-pos-users.html#440) for an instruction on how to deal with down payments.
+
+## License
+
+This project is licensed under the GNU AFFERO GENERAL PUBLIC LICENSE. – find further information in the [LICENSE.md](https://github.com/plentymarkets/plugin-pos-invoice/blob/master/LICENSE.md).
