@@ -2,21 +2,21 @@
   "name": "PosInvoice",
   "namespace": "PosInvoice",
   "marketplaceName": {
-    "de": "plentyPOS Kauf auf Rechnung",
-    "en": "plentyPOS Invoice"
+    "de": "POS Kauf auf Rechnung",
+    "en": "POS Invoice"
   },
   "type": "payment",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "platform": {
     "php": ">=7.3 <8.1"
   },
   "license": "AGPL-3.0",
   "pluginIcon": "icon_plugin_xs.png",
   "price": 0.00,
-  "description": "Invoice plugin for plentymarkets POS",
+  "description": "Invoice plugin for POS",
   "shortDescription": {
-    "de": "Mit dem Plugin plentyPOS Kauf auf Rechnung bietest du Bestandskunden den Rechnungskauf über dein plentyPOS Kassensystem an.",
-    "en": "The plugin plentyPOS Invoice provides the payment method Invoice for your plentyPOS system."
+    "de": "Mit dem Plugin POS Kauf auf Rechnung bietest du Bestandskunden den Rechnungskauf über dein POS Kassensystem an.",
+    "en": "The plugin POS Invoice provides the payment method Invoice for your POS system."
   },
   "categories": [
     "3519"
@@ -36,11 +36,12 @@
     "Kassensystem",
     "point of sale",
     "App",
-    "mobile"
+    "mobile",
+    "PlentyONE"
   ],
-  "author": "plentysystems AG",
+  "author": "PlentyONE GmbH",
   "authorIcon": "icon_author_xs.png",
-  "email": "sales@plentymarkets.com",
+  "email": "sales@plentyone.com",
   "phone": "+49 561 98 681 100",
   "serviceProvider": "PosInvoice\\Providers\\PosInvoiceServiceProvider"
 }

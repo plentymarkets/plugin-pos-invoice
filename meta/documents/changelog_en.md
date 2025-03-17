@@ -5,6 +5,14 @@
 ### Changed
 
 - User guide adjustments
+- author icon updated
+
+
+## v.1.2.4
+
+### Changed
+
+- User guide adjustments
 
 
 ## v.1.2.3
