@@ -120,38 +120,44 @@ class PosInvoiceHelper
      */
     public function isAllowedForContact($contactId)
     {
+        $paymentMethodId = $this->getPaymentMethodId();
+
         // Payment method not found in database
-        if ($this->getPaymentMethodId() === self::NO_PAYMENTMETHOD_FOUND) {
+        if ($paymentMethodId === self::NO_PAYMENTMETHOD_FOUND) {
             return false;
         }
 
+        $paymentMethodId = (int)$paymentMethodId;
+
         $contactClassConfig = $this->contactService->getContactInvoiceClassData($contactId);
-        $allowedIds = [];
+        $contactClassAllowsPayment =
+            !empty($contactClassConfig['allowedMethodOfPaymentIdsList']) &&
+            is_array($contactClassConfig['allowedMethodOfPaymentIdsList']) &&
+            in_array((string)$paymentMethodId, $contactClassConfig['allowedMethodOfPaymentIdsList']);
 
         // Priority 1: Contact class allows payment method -> ignore contact settings
-        if (
-            !empty($contactClassConfig['allowedMethodOfPaymentIdsList']) &&
-            is_array($contactClassConfig['allowedMethodOfPaymentIdsList'] &&
-                !in_array($this->getPaymentMethodId(), $contactClassConfig['allowedMethodOfPaymentIdsList']))
-        ) {
+        if ($contactClassAllowsPayment) {
             return true;
         }
 
+
         /** @var Contact $contact */
         $contact = $this->contactService->getContact($contactId);
+        $contactInvoiceAllowed = null;
 
         // Priority 2: Contact class does not allow -> check contact settings
-        // If no record exists, payment method is allowed (backward compatible)
+        // If no record exists, payment method is not allowed
         /** @var ContactAllowedMethodOfPayment $allowedMethodOfPayment */
         foreach ($contact->allowedMethodsOfPayment as $allowedMethodOfPayment) {
             if ((int)$allowedMethodOfPayment->methodOfPaymentId !== 2) {
                 continue;
             }
 
-            return (int)$allowedMethodOfPayment->allowed === 1;
+            $contactInvoiceAllowed = (int)$allowedMethodOfPayment->allowed === 1;
+            break;
         }
 
-        return true;
+        return $contactInvoiceAllowed === true;
     }
 
     /**
