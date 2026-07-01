@@ -120,25 +120,20 @@ class PosInvoiceHelper
      */
     public function isAllowedForContact($contactId)
     {
-        $paymentMethodId = $this->getPaymentMethodId();
-
         // Payment method not found in database
-        if ($paymentMethodId === self::NO_PAYMENTMETHOD_FOUND) {
+        if ($this->getPaymentMethodId() === self::NO_PAYMENTMETHOD_FOUND) {
             return false;
         }
 
         $contactClassConfig = $this->contactService->getContactInvoiceClassData($contactId);
         $allowedIds = [];
 
+        // Priority 1: Contact class allows payment method -> ignore contact settings
         if (
             !empty($contactClassConfig['allowedMethodOfPaymentIdsList']) &&
-            is_array($contactClassConfig['allowedMethodOfPaymentIdsList'])
+            is_array($contactClassConfig['allowedMethodOfPaymentIdsList'] &&
+                !in_array($this->getPaymentMethodId(), $contactClassConfig['allowedMethodOfPaymentIdsList']))
         ) {
-            $allowedIds = $contactClassConfig['allowedMethodOfPaymentIdsList'];
-        }
-
-        // Priority 1: Contact class allows payment method -> ignore contact settings
-        if (in_array($paymentMethodId, $allowedIds, true)) {
             return true;
         }
 
