@@ -1,5 +1,12 @@
 # Release Notes für POS Kauf auf Rechnung
 
+## v.1.3.0
+
+### Geändert
+
+- Optimierung der Prüfungslogik für Zahlungsarten: Die Einstellungen an der Kundenklasse werden ab sofort priorisiert behandelt. Die Einstellungen am Kontakt greifen nur noch nachgelagert, falls an der Kundenklasse keine Aktivierung hinterlegt ist.
+
+
 ## v.1.2.5
 
 ### Geändert

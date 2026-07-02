@@ -1,5 +1,11 @@
 # Release Notes for POS Invoice
 
+## v.1.3.0
+
+### Changed
+
+- Optimization of the payment method validation logic: Settings on the customer class are now prioritized. Settings on the contact are only applied as a fallback if no activation is configured on the customer class.
+
 ## v.1.2.5
 
 ### Changed
