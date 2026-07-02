@@ -1,5 +1,12 @@
 # Release Notes for POS Invoice
 
+## v.1.3.0
+
+### Changed
+
+- Adjustments to the payment-method validation logic.
+
+
 ## v.1.2.5
 
 ### Changed

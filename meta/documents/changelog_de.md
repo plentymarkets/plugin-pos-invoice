@@ -1,5 +1,12 @@
 # Release Notes für POS Kauf auf Rechnung
 
+## v.1.3.0
+
+### Geändert
+
+- Anpassungen an der Prüfungslogik für Zahlungsarten.
+
+
 ## v.1.2.5
 
 ### Geändert
