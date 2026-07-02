@@ -4,7 +4,7 @@
 
 ### Geändert
 
-- Anpassungen an der Prüfungslogik für Zahlungsarten.
+- Optimierung der Prüfungslogik für Zahlungsarten: Die Einstellungen an der Kundenklasse werden ab sofort priorisiert behandelt. Die Einstellungen am Kontakt greifen nur noch nachgelagert, falls an der Kundenklasse keine Aktivierung hinterlegt ist.
 
 
 ## v.1.2.5
