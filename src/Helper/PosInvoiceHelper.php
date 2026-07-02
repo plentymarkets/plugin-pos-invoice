@@ -120,27 +120,47 @@ class PosInvoiceHelper
      */
     public function isAllowedForContact($contactId)
     {
-        /** @var Contact $contact */
-        $contact = $this->contactService->getContact($contactId);
+        $paymentMethodId = $this->getPaymentMethodId();
 
-        /** @var ContactAllowedMethodOfPayment $allowedMethodOfPayment */
-        foreach ($contact->allowedMethodsOfPayment as $allowedMethodOfPayment) {
-            /* check if invoice allowed for contact */
-            if ($allowedMethodOfPayment->methodOfPaymentId == 2 && $allowedMethodOfPayment->allowed == 0) {
-                return false;
-            }
+        // Payment method not found in database
+        if ($paymentMethodId === self::NO_PAYMENTMETHOD_FOUND) {
+            return false;
         }
+
+        $paymentMethodId = (int)$paymentMethodId;
 
         $contactClassConfig = $this->contactService->getContactInvoiceClassData($contactId);
+        $contactClassAllowsPayment =
+            !empty($contactClassConfig['allowedMethodOfPaymentIdsList']) &&
+            is_array($contactClassConfig['allowedMethodOfPaymentIdsList']) &&
+            in_array((string)$paymentMethodId, $contactClassConfig['allowedMethodOfPaymentIdsList']);
 
-        if (!empty($contactClassConfig['allowedMethodOfPaymentIdsList']) && is_array($contactClassConfig['allowedMethodOfPaymentIdsList'])) {
-            /* check if invoice allowed for contact class */
-            if (!in_array($this->getPaymentMethodId(), $contactClassConfig['allowedMethodOfPaymentIdsList'])) {
-                return false;
-            }
+        // Priority 1: Contact class allows payment method -> ignore contact settings
+        if ($contactClassAllowsPayment) {
+            return true;
         }
 
-        return true;
+
+        /** @var Contact|null $contact */
+        $contact = $this->contactService->getContact($contactId);
+        if ($contact === null) {
+            return false;
+        }
+        $contactInvoiceAllowed = null;
+
+        // Priority 2: Contact class does not allow -> check contact settings
+        // If no record exists, payment method is not allowed
+        /** @var ContactAllowedMethodOfPayment $allowedMethodOfPayment */
+        foreach ($contact->allowedMethodsOfPayment as $allowedMethodOfPayment) {
+            if ((int)$allowedMethodOfPayment->methodOfPaymentId !== 2) {
+                continue;
+            }
+
+            $contactInvoiceAllowed = (int)$allowedMethodOfPayment->allowed === 1;
+            break;
+        }
+
+        return $contactInvoiceAllowed === true;
     }
 
     /**
