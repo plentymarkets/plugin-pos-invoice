@@ -6,7 +6,7 @@
     "en": "POS Invoice"
   },
   "type": "payment",
-  "version": "1.2.5",
+  "version": "1.3.0",
   "platform": {
     "php": ">=7.3 <8.1"
   },
