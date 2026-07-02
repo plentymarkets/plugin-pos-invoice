@@ -141,8 +141,11 @@ class PosInvoiceHelper
         }
 
 
-        /** @var Contact $contact */
+        /** @var Contact|null $contact */
         $contact = $this->contactService->getContact($contactId);
+        if ($contact === null) {
+            return false;
+        }
         $contactInvoiceAllowed = null;
 
         // Priority 2: Contact class does not allow -> check contact settings
